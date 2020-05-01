@@ -1,0 +1,29 @@
+= web3_tech
+:author: web3scout
+:doctype: book
+:toc:
+:toclevels: 6
+:media: prepress
+:icons: font
+:pdf-page-size: 8in x 9in
+
+== LICENSE
+
+This copy is for PERSONAL USE ONLY. You may read it for free. You may NOT distribute this book or create derivative work. _web3_tech_ is licensed under CC-BY-NC-ND.
+
+
+
+
+include::intro.asciidoc[]
+include::hash-functions.asciidoc[]
+include::distributed-hash-tables.asciidoc[]
+include::symmetric-encryption.asciidoc[]
+include::asymmetric-encryption.asciidoc[]
+include::digital-signatures.asciidoc[]
+include::blockchain.asciidoc[]
+include::direct-acyclic-graph.asciidoc[]
+include::distributed-consensus-protocols.asciidoc[]
+include::zero-knowledge-proofs.asciidoc[]
+include::distributed-ledger.asciidoc[]
+
+
