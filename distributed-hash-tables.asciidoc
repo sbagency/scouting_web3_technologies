@@ -1,0 +1,32 @@
+== distributed hash tables (DHT)
+[%hardbreaks]
+
+=== uuid 
+[%hardbreaks]
+Universally unique identifier (random bytes). An examples of uuids:
+_b1afe5bc-8c74-11ea-bc55-0242ac130003_ uuid v1 (generation based on timestamp + MAC address);
+_2da2123a-8092-45b6-a59e-f7866287bdc2_ uuid v4 (just random bytes based on secure random numbers generator).
+It's very low probability of collision because of enough number of bytes (situation when two parties generate same uuids).
+
+=== key-value data storage 
+It's a data storage with data (value) access (read/write) by key, key-value data storage is build on _hash tables_, _trees_ and other types of indexes. _Hash tables_ give fast acesses, _trees_ give possibility to iterate over ordered keys.  
+
+=== hash table 
+It's a data structure where keys are mapped by algorithm based on *_hash function_* to data (value) location.
+
+
+=== distributed hash table 
+It's a nodes search mechanism (_protocol_) in distributed network where keys and nodes ids are mapped by *_hash function_* to unified address space. Node address can be constructed as hash of node _public key_ or _network address_. 
+
+=== distributed ledger technology (DLT) 
+It's a technology of cryptograhically and algorithmically protected database (ledger) replicated across many nodes.
+
+Each node in network stores subset of DHT and dynamic list of other nodes, users can send request to any node, request is forwarded from one node to another till answer is found. Nodes dynamically can join/leave network, information about nodes is dynamically updated. Data can be replicated to many nodes. There is no _single point of failure_ or central node, all nodes are equal.
+
+Key in *_hash table_* or *_DHT_* can be generated as *_uuid_* or computed as *_hash_* of data, *_uuid_* is location addressing, *_hash_* is content addressing.
+
+*_hash table_* is supported almost by all programming languages and many libraries. *_DHT_* is implemented in distributed protocols (databases and file systems) such as https://ipfs.io/[ipfs].
+
+To protect distributed protocols from different kind of attacks *_digital signatures_* and other mechanisms are used.
+
+You can build your own *_DHT_* protocol optimised for speed and has advanced security features. *_DHT_* + *_DLT_* is a good combination, have a look at https://filecoin.io/[filecoin], https://sia.tech/[sia] and similar projects.

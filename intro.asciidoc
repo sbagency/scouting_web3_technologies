@@ -39,19 +39,19 @@ It's a protocol to reach consensus of some state in distributed network of nodes
 One party (prover) proves to another party (verifier) a knowledge of value x without revealing x (zero knowledge of x), only _proof_ of _something_ with no other information about that _something_.
 
 === smart_contract 
-It's a technology for digital contract's execution in trust-less environment, smart_contract in simple case can be processed between two parties, or executed for many paries on top of distributed ledger (blockchain) network
+It's a technology for digital contract's execution in trust-less environment, smart_contract in simple case can be processed between two parties, or executed for many parties on top of distributed ledger (blockchain) network
 
 === distributed application (dapp)
 It's an app runs on top of distributed protocol
 
 === tokenomic 
-It's a digital economy system with custom rules of tokens _emission_, _transfers_, _exchange_, etc., tokens can be _minted_ independentely or linked to fiat money or other kind of assets. 
+It's a digital economy system with custom rules of tokens _emission_, _transfers_, _exchange_, etc., tokens can be _minted_ independently or linked to fiat money or other kind of assets. 
 
 === cryptocurrency 
 It's a digital currency, usually implemented on top of distributed ledger (blockchain) network.
 
 === stablecoin 
-Low volatility (stable) digital coin linked somehow to stable asset (fiat money, metall, etc. ).
+Low volatility (stable) digital coin linked somehow to stable asset (fiat money, metal, etc. ).
 
 === defi 
 Decentralized finance, decentralized financial applications. It's an _dapp_ that can replace fiat money institutions.

@@ -5,7 +5,7 @@
 Takes any size input, produces fixed size output.
 
 === cryptographic hash function 
-It's a *_hash function_* with impossibility to find input by output.
+It's a *_hash function_* with impossibility to find input by output or  _one way_ function.
 
 === collision 
 It's a situation when *_hash function_* produces same output for two different inputs.
@@ -27,4 +27,10 @@ Simple *_hash function_* can be constucted as a logical or arithmetical sum of i
 More practical *_hash functions_* are _bit mixers_, with property that one bit change in input produces about half bits change in output.
 
 === merkle tree
-It's a binary tree of concatenated (paired) hashes of neigbour data blocks. Whole data can be splited into data blocks. Pair of neighbor blocks hashes is concatenated to produce next level hash, this repeats to array of produced hashes untill one root hash is left. The pass from the bottom data block to root hash is named as _merle path_. 
+It's a binary tree of concatenated (paired) hashes of neigbour data blocks. Whole data can be splited into data blocks. Pair of neighbor blocks hashes is concatenated to produce next level hash, this repeats to array of produced hashes untill one hash is left (merkle root). The path from the bottom data block hash to root hash is named as _merle path_.
+
+image::images/merkle-tree.png[float="right",align="center"]
+
+_Merkle path_ can be used to verify that data block is a part of whole data array.
+
+
