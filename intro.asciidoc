@@ -1,0 +1,59 @@
+[role="pagenumrestart"]
+[[intro_chapter]]
+== intro
+[%hardbreaks]
+
+_New/old_ *technologies* for the _new/old_ web:
+
+=== hash function 
+It's widely used for data verification and indexing in data storage and crypto protocols.
+
+=== hash table
+It's used as a quick data index, _O(1)_ overage search time (if no collisions). 
+
+=== merkle tree
+For small data blocks verification of the whole big one.
+
+=== distributed hash table (DHT)
+It's used for nodes search in distributed network.
+
+=== symmetric encryption 
+For data encryption and decryption by one key.
+
+=== asymmetric encryption 
+For data encryption by one key and decryption by another key, this key pair are linked.
+
+=== digital signature 
+It's  widely used for digital data authenticity and verification.
+
+=== blockchain 
+It's growing data (chain of blocks) consistency verification data structure and mechanism, sometimes in a specific context word _blockchain_ means distributed network or protocol not just only data structure.
+
+=== direct acyclic graph (DAG)
+Same as _blockchain_ but instead of chain of blocks direct acyclic graph is used.
+
+=== distributed consensus protocol
+It's a protocol to reach consensus of some state in distributed network of nodes without trust.
+
+=== zero knowledge proof 
+One party (prover) proves to another party (verifier) a knowledge of value x without revealing x (zero knowledge of x), only _proof_ of _something_ with no other information about that _something_.
+
+=== smart_contract 
+It's a technology for digital contract's execution in trust-less environment, smart_contract in simple case can be processed between two parties, or executed for many paries on top of distributed ledger (blockchain) network
+
+=== tokenomic 
+It's a digital economy system with custom rules of tokens _emission_, _transfers_, _exchange_, etc., tokens can be _minted_ independentely or linked to fiat money or other kind of assets. 
+
+=== cryptocurrency 
+It's a digital currency, usually implemented on top of distributed ledger (blockchain) network.
+
+=== stablecoin 
+Low volatility (stable) digital coin linked somehow to stable asset (fiat money, metall, etc. ).
+
+=== defi 
+Decentralized finance, decentralized financial applications
+
+=== fintech 
+Financial technologies applications and services
+
+
