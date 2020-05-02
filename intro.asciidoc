@@ -12,7 +12,7 @@ It's widely used for data verification and indexing in data storage and crypto p
 It's used as a quick data index, _O(1)_ overage search time (if no collisions). 
 
 === merkle tree
-For small data blocks verification of the whole big one.
+For small data blocks verification (by _merkle path_ in a _merkle tree_) of the whole big one. 
 
 === distributed hash table (DHT)
 It's used for nodes search in distributed network.
@@ -41,6 +41,9 @@ One party (prover) proves to another party (verifier) a knowledge of value x wit
 === smart_contract 
 It's a technology for digital contract's execution in trust-less environment, smart_contract in simple case can be processed between two parties, or executed for many paries on top of distributed ledger (blockchain) network
 
+=== distributed application (dapp)
+It's an app runs on top of distributed protocol
+
 === tokenomic 
 It's a digital economy system with custom rules of tokens _emission_, _transfers_, _exchange_, etc., tokens can be _minted_ independentely or linked to fiat money or other kind of assets. 
 
@@ -51,9 +54,9 @@ It's a digital currency, usually implemented on top of distributed ledger (block
 Low volatility (stable) digital coin linked somehow to stable asset (fiat money, metall, etc. ).
 
 === defi 
-Decentralized finance, decentralized financial applications
+Decentralized finance, decentralized financial applications. It's an _dapp_ that can replace fiat money institutions.
 
 === fintech 
-Financial technologies applications and services
+Financial technologies applications and services. It's an _app_ that can replace whole bank.
 
 
