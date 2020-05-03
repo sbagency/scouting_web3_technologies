@@ -12,7 +12,7 @@
 This copy is for PERSONAL USE ONLY. You may read it for free. You may NOT distribute this book or create derivative work. _web3_tech_ is licensed under CC-BY-NC-ND.
 
 
-
+[%hardbreaks]
 
 include::intro.asciidoc[]
 
