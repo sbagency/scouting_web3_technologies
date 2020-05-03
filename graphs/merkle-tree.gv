@@ -1,0 +1,33 @@
+digraph hierarchy {
+node [fontname=Monospace,fontsize=12,shape=box]
+edge [dir = back] 
+"H10" [style=dashed,color=red];
+"H10" -> "H8" 
+"H10" -> "H9" [style=dashed,color=red];
+"H8" -> "H5"
+//"01" [label="",style=dashed]
+//"H8" -> "01"
+"H9" -> "H6" [style=dashed,color=red];
+"H9" [style=dashed,color=red];
+"H9" -> "H7" 
+"H5" -> "H0" 
+"H5" -> "H1"
+"H6" -> "H2" 
+"H6" -> "H3" [style=dashed,color=red];
+"H6" [style=dashed,color=red];
+"H7" -> "H4"
+//"00" [label="",style=dashed]
+//"H7" -> "00"
+"H0" -> "D0"
+"H1" -> "D1"
+"H2" -> "D2"
+"H3" -> "D3"
+"H3" [style=dashed,color=red];
+"H4" -> "D4"
+"D0" [style=filled];
+"D1" [style=filled];
+"D2" [style=filled];
+"D3" [style=filled];
+"D4" [style=filled];
+
+}

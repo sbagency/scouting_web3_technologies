@@ -1,0 +1,22 @@
+== asymmetric encryption
+[%hardbreaks]
+
+It's an _encryption_ with one _key_ and _decryption_ with another _key_. One _key_ _encrypts_, second _key_ _decrypts_, _decryption_ _key_ is produced from _encryption_ key.
+
+image::images/asymmetric-encryption.png[float="left",align="center"]
+
+=== public key cryptography
+[%hardbreaks]
+It's an _asymmetric encryption_ protocol, when participants generates key pairs: _private_, _public_ keys. _Public key_ is public and used to encrypt _messages_. _Private_ key is secret and used to decrypt messages. One party can send an encrypted by _public key_ a message to another party. Message is decrypted by _secret_ _key_.
+
+Trusted 3d party is required to provide _certificates_ for _public keys_.
+
+_RSA_ (_Rivest–Shamir–Adleman_) one of the first public key protocols is still widely used.
+
+=== encrypted channel
+[%hardbreaks]
+Protocol of encrypted channel for many parties can use _public key cryptography_ to exhange shared secret key then messages are symmetrically encypted by this secret key.
+
+
+
+

@@ -1,0 +1,41 @@
+== symmetric encryption
+[%hardbreaks]
+
+=== encryption
+It's a process that encrypts a plain input to encrypted output.
+
+=== decryption
+It's a process that decrypts an encrypted input to plain output.
+
+=== symmetric_encryption (one key)
+[%hardbreaks]
+It's a symmetric if same key for _encryption_ and _decryption_ are used.
+
+image::images/symmetric-encryption.png[float="left",align="center"]
+
+=== plain text
+It's an alias to input, _plain_ means _unencrypted_.
+
+=== key derivation function (KDF)
+KDF generates another key based on input key (derivates), KDFs are constructed on _cryptographic hash functions_.
+
+
+Basic form of symmetric encryption are constructed on bitwise xor operation (_encrypted_data_ = _plain text_ xor _key_), _key_ must be random, unique and size of _key_ must be not less than size of _plai_text_ (that hard to use in practice for big _plain text_).
+
+More complex _symmetric_encryption_ algoritms are based on bitmixers, such as _AES_.
+
+Uniqness and randomness of keys are very important. There are many approaches how to generate keys more or less secure.
+
+=== Brute force attack
+[%hardbreaks]
+Attacker repeats different variants of _key_ to decrypt data, some prior information of _key_ generation can be used to reduce number of variants.
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+digraph g {
+
+//graph [layout = circo]
+node [fontname=Monospace,fontsize=12,shape=box]
+
+"encryption"  [color=red];
+
+"key1" [label="encryption key"];
+"data1" [label="plain data"];
+"edata1" [label="encrypted data"];
+
+"key1" -> "encryption"
+"data1" -> "encryption"
+"encryption" -> "edata1"
+
+
+"decryption"  [color=red];
+
+"key2" [label="decryption key"];
+"data2" [label="plain data"];
+"edata2" [label="encrypted data"];
+
+"key2" -> "decryption"
+"edata2" -> "decryption"
+"decryption" -> "data2"
+
+}

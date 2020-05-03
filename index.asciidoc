@@ -15,15 +15,21 @@ This copy is for PERSONAL USE ONLY. You may read it for free. You may NOT distri
 
 
 include::intro.asciidoc[]
+
 include::hash-functions.asciidoc[]
-include::distributed-hash-tables.asciidoc[]
 include::symmetric-encryption.asciidoc[]
 include::asymmetric-encryption.asciidoc[]
+
 include::digital-signatures.asciidoc[]
+include::zero-knowledge-proofs.asciidoc[]
+
+include::distributed-hash-tables.asciidoc[]
+
 include::blockchain.asciidoc[]
 include::direct-acyclic-graph.asciidoc[]
+
 include::distributed-consensus-protocols.asciidoc[]
-include::zero-knowledge-proofs.asciidoc[]
-include::distributed-ledger.asciidoc[]
+
+include::distributed-ledger-technology.asciidoc[]
 
 
