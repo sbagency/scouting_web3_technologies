@@ -1,0 +1,10 @@
+== zero knowledge proofs (ZKP)
+[%hardbreaks]
+
+Simple example of _ZKP_ is _digital signature_, prover proves that hi/she knows a _secret key_ by _signing_ a message without revealing a _secret key_, verifier verifies that signature is correct with associated _public key_.
+
+_ZKP_ can be used to construct protocols for verifiable computations without full re-computing and without revealing an inputs. Thare are many constructions for that (_zkSNARKs_,_zkSTARKs_,etc.).
+
+_ZKP_ is a pretty young technology (use it at your own risk).
+
+

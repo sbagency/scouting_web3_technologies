@@ -1,0 +1,6 @@
+== direct acyclic graph (DAG)
+[%hardbreaks]
+
+Same as _blockchain_ (verifiable transactions log), but some features: ability to auto-order transactions.
+
+
