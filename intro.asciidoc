@@ -36,7 +36,7 @@ Same as _blockchain_ but instead of chain of blocks direct acyclic graph is used
 It's a protocol to reach consensus of some state in distributed network of nodes without _trust_.
 
 === zero knowledge proof
-One party (prover) proves to another party (verifier) a knowledge of value x without revealing x (zero knowledge of x), only _proof_ of _something_ with no other information about that _something_.
+One party (prover) proves to another party (verifier) a knowledge of _x_ without revealing _x_ (zero knowledge of _x_), only _proof_ of _something_ with no other information about that _something_.
 
 === smart contract
 It's a technology for digital contract's execution in _trustless_ environment, _smart_contract_ in simple case can be processed between two parties, or executed for many parties on top of distributed ledger (blockchain) network

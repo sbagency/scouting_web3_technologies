@@ -1,0 +1,5 @@
+== distributed ledger technology (DLT)
+
+_DLT_ is an umbrella term for distributed protocols (L1) technologies constructed on _blockhain_, _DAG_ or some other _state transition_ verification and protection approaches. 
+
+
