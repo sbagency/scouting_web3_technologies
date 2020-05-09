@@ -1,0 +1,7 @@
+== distributed consensus protocols
+
+It's simply voting in trustless environment.
+
+=== Byzantine fault tolerance (BFT)
+Tolerance to malicious minority of participants.
+
