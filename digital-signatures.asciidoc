@@ -1,7 +1,7 @@
 == digital signatures
 [%hardbreaks]
 
-_Digital signature_ is a proof of _secret key_ and data _hash_ usage.
+_Digital signature_ is a proof of _secret key_ and data _hash_ usage for corresponding _public key_ and data.
 
 _Public key cryptograhy_ is widely used to build _digital signatures_, simple protocol: _signature_ = encrypted data hash with _secret key_ (signature = encrypt( hash(data), _secret key_ )), verification is a decryption of _signature_ by _public key_ and comparison of hashes (hash(data) == decrypt( signature, _public key_ )).
 
@@ -9,7 +9,11 @@ _Public key cryptograhy_ is widely used to build _digital signatures_, simple pr
 It's construction when multiple keys (parties) are used to _sign_ data that usually required in distributed protocols.
 
 === ring signatures
-It's used for privacy preserving. Signature can be produced by any member of a group without revealing who exactly. Verifier can only verify that signature is correct and a whole group of members is known.
+It's used for privacy preserving. Signature can be produced by any member of a group without revealing who exactly. Verifier can only verify that signature is correct and one of the group memders created this signature.
 
 === one time signatures (quantum resistant)
-Many _secret keys_ are generated and _public keys_ _merkle tree_ are built for verification, each _secret key_ is used only once. Any well known algorithm to _sign_ and _verify_ can be used + _merkle tree_ test. This is a bit over redundant but almost impossible to fake your signature even if base _digital signature_ algorithm is hacked. It's scalable by generating new array of _secret keys_ and _merkel tree_ linked to previous one.
+The idea is simple to use pair _secret_,_public_ key only once.
+
+Many _secret keys_ are generated and _public keys_ _merkle tree_ are built for verification, each _secret key_ is used only once. Any well known algorithm to _sign_ and _verify_ can be used + _merkle tree_ for test. This is a bit over redundant but almost impossible to fake your signature. It's scalable by generating new array of _secret keys_ and _merkel tree_ linked to previous one.
+
+_Lamport signature_ and many other methods are exist to construct _one time_ _digital signatures_. Any custom _protocol_ can be constructed for specific needs.
