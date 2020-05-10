@@ -13,10 +13,20 @@ Trusted 3d party is required to provide _certificates_ for _public keys_.
 
 _RSA_ (_Rivest–Shamir–Adleman_) one of the first public key protocols is still widely used.
 
+=== public key infrastructure (PKI)
+Trusted 3d parties provide proofs (_certificates_) for _public keys_.
+
+=== distributed public key infrastructure (DPKI)
+Trustless distributed networks (_DLT_) provide proofs (data in _smart contracts_/_transactions_) for _public keys_.
+
+
 === encrypted channel
 [%hardbreaks]
 Protocol of encrypted channel for many parties can use _public key cryptography_ to exhange shared secret key then messages are symmetrically encypted by this secret key.
 
 
+=== brute force attack
+[%hardbreaks]
+Attacker repeats different variants of _secret key_ to produce _public key_, some prior information of _key_ generation can be used to reduce number of variants.
 
 

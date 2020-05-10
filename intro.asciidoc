@@ -26,6 +26,9 @@ For data encryption by one key and decryption by another key, this key pair are 
 === digital signature
 It's  widely used for data authenticity and verification.
 
+=== post quantum
+Protocol is _post quantum_ if it can't be hacked by future quantum computers.
+
 === blockchain
 It's growing data (chain of blocks) consistency verification _data structure_ and _mechanism_.
 
@@ -35,32 +38,33 @@ Same as _blockchain_ but instead of chain of blocks direct acyclic graph is used
 === distributed consensus protocol
 It's a protocol to reach consensus of some state in distributed network of nodes without _trust_.
 
+=== byzantine fault tolerance (BFT)
+It's a tolerance of distributed network (protocol) to attacks from malicious participants.
+
 === zero knowledge proof
 One party (prover) proves to another party (verifier) a knowledge of _x_ without revealing _x_ (zero knowledge of _x_), only _proof_ of _something_ with no other information about that _something_.
 
 === smart contract
-It's a technology for digital contract's execution in _trustless_ environment, _smart_contract_ in simple case can be processed between two parties, or executed for many parties on top of distributed ledger (blockchain) network
+It's a technology for digital contract's execution in _trustless_ environment, _smart contract_ in simple case can be processed between two parties, or executed for many parties on top of distributed ledger (blockchain) network, participants send _transactions_ to _smart contract_.
 
 === L1 protocols
-L1 is an alias for distributed ledger protocols or similar.
+_L1_ is an alias for _distributed ledger_ (_on-chain_) protocols or similar.
 
 === L2 protocols
-L2 is an alias for protocols on top of L1 protocols.
+_L2_ is an alias for direct p2p (_off-chain_) protocols constructed on top of  direct _p2p_ _transactions_ and _L1_ protocols.
 
-=== Byzantine fault tolerance (BFT)
-It's a tolerance of distributed network (protocol) to attacks from malicious participants.
 
-=== Payment channel
-It's a p2p protocol for instant payments in any crypto, token or asset.
+=== payment channel
+It's a _p2p_ protocol (_L2_) for instant payments in any crypto, token or asset.
 
-=== State channel
+=== state channel
 Same as payment channel but for any state.
 
-=== Lightning network
-It's an L2 network (protocol) of payment/state channels.
+=== lightning network
+It's an _L2 network_ (protocol) of _payment/state_ channels and hubs.
 
 === distributed application (dapp)
-It's an app runs on top of distributed protocol (L1/L2).
+It's an _app_ runs on top of distributed protocols (_L1/L2_).
 
 === tokenomic
 It's a digital economy system with custom rules of tokens _emission_, _transfers_, _exchange_, etc., tokens can be _minted_ (_generated_) independently or linked to fiat money or other kind of assets.
@@ -77,4 +81,14 @@ Decentralized finance, decentralized financial applications. It's a _dapp_ that 
 === fintech
 Financial technologies applications and services. It's an _app_ that can replace whole bank.
 
+=== self sovereign identity (SSI)
+It's a concept supported by _w3c_ of independent _digital identity management_.
 
+=== decentralized identifiers (DIDs)
+Self generated and managed globally unique identifiers are used in decentralized netwoks (protocols).
+https://www.w3.org/TR/did-core/[W3C Working Draft]
+
+
+=== verifiable credentials
+Self managed digital credentials that can be issued and verified by 3d parties.
+https://www.w3.org/2017/vc/WG/[W3C Working Group]

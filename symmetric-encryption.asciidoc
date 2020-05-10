@@ -17,18 +17,18 @@ image::images/symmetric-encryption.png[float="left",align="center"]
 It's an alias to input, _plain_ means _unencrypted_.
 
 === key derivation function (KDF)
-KDF generates another key based on input key (derivates), KDFs are constructed on _cryptographic hash functions_.
+KDF generates another key based on input key (derivates), usually KDFs are constructed on _cryptographic hash functions_.
 
 
-Basic form of symmetric encryption are constructed on bitwise xor operation (_encrypted_data_ = _plain text_ xor _key_), _key_ must be random, unique and size of _key_ must be not less than size of _plai_text_ (that hard to use in practice for big _plain text_).
+Basic form of _symmetric encryption_ are constructed on bitwise xor operation (_encrypted_data_ = _plain text_ xor _key_), to perfection _key_ must be random, unique and size of _key_ must be not less than size of _plai_text_ (that hard to use in practice for big _plain text_).
 
-More complex _symmetric_encryption_ algoritms are based on bitmixers, such as _AES_.
+More complex _symmetric_encryption_ algoritms are based on _bitmixers_.
 
-Uniqness and randomness of keys are very important. There are many approaches how to generate keys more or less secure.
+Uniqness and randomness of keys are very important. There are many approaches how to generate keys more or less secure. Many vulnerabilities are reasons of bad key generation.
 
-=== Brute force attack
+=== brute force attack
 [%hardbreaks]
-Attacker repeats different variants of _key_ to decrypt data, some prior information of _key_ generation can be used to reduce number of variants.
+Attacker repeats different variants of _key_ to decrypt data and test results, some prior information of _key_ generation can be used to reduce number of variants.
 
 
 
