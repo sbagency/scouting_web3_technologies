@@ -30,13 +30,16 @@ It's  widely used for data authenticity and verification.
 Protocol is _post quantum_ if it can't be hacked by future quantum computers.
 
 === blockchain
-It's growing data (chain of blocks) consistency verification _data structure_ and _mechanism_.
+It's growing data (chain of blocks) consistency verification _data structure_ and _technology_ used in _distributed protocols_.
 
 === direct acyclic graph (DAG)
 Same as _blockchain_ but instead of chain of blocks direct acyclic graph is used.
 
+=== distributed protocol
+It's a protocol for distributed network of nodes, all participants exchange digitally signed messages to achieve network goals.
+
 === distributed consensus protocol
-It's a protocol to reach consensus of some state in distributed network of nodes without _trust_.
+It's a protocol to reach _consensus_ of some state in distributed network of nodes without _trust_.
 
 === byzantine fault tolerance (BFT)
 It's a tolerance of distributed network (protocol) to attacks from malicious participants.
@@ -46,6 +49,9 @@ One party (prover) proves to another party (verifier) a knowledge of _x_ without
 
 === smart contract
 It's a technology for digital contract's execution in _trustless_ environment, _smart contract_ in simple case can be processed between two parties, or executed for many parties on top of distributed ledger (blockchain) network, participants send _transactions_ to _smart contract_.
+
+=== distributed ledger technology (DLT)
+It's used to process transactions and store verifiable state and transactions log (_verifiable ledger_) in distributed network, each node stores same copy of data as other ones for _byzantine fault tolerance_ (_BFT_).
 
 === L1 protocols
 _L1_ is an alias for _distributed ledger_ (_on-chain_) protocols or similar.
