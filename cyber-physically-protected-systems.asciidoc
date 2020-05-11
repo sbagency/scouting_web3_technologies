@@ -1,0 +1,7 @@
+== cyber physically protected systems
+
+=== hardware wallets
+It's an isolated _cyber physically protected_ hardware device to _sign transactions_ and store private info like _secret keys_ and _passwords_.
+
+=== hardware security modules (HSM)
+It's an isolated _cyber physically protected_ hardware device with advanced crypto functions.

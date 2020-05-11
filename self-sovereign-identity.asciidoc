@@ -1,0 +1,6 @@
+== self sovereign identity (SSI)
+[%hardbreaks]
+
+It's a _self digital identity management_. SSI is build on such tech as _digital signatures_, _distributed ledgers_, _zero knoledge proofs_, _decentralized identifiers_, _verifiable credentials_, _cryptographically protected distributed protocols_, etc. The whole web3 infrastructure is requred to make this concept alive. First of all it's public _distributed ledger_ networks. User friendly and cyber-physically protected client applications (wallets)
+
+At SSI concept _users_ are collecting facts, achievements, accounts & so on as _crypto-protected_ linked docs. This docs can be used to interact with other users, busnises, government institutions and so on.

@@ -1,7 +1,13 @@
 == distributed consensus protocols
+It's simply voting and state transition in distributed trustless environment. In theory without central
 
-It's simply voting in trustless environment.
+State transition is processed by ordered list of _transactions_. It can be done one by one _transaction_ or _blocks_ of _transactions_.
 
-=== Byzantine fault tolerance (BFT)
+Technically to achieve consensus of state transition each node should send
+
+=== byzantine fault tolerance (BFT)
 Tolerance to malicious minority of participants.
+
+=== proof of work
+Proof of that computationally hard problem is solved is used to select a member who provides state transition.
 

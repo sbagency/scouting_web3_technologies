@@ -1,0 +1,2 @@
+== decentralized identifiers (DIDs)
+Self generated and managed globally unique identifiers and distributed/centralized infrastructure (DPKI/PKI) to protect DIDs.

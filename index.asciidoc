@@ -32,4 +32,11 @@ include::distributed-consensus-protocols.asciidoc[]
 
 include::distributed-ledger-technology.asciidoc[]
 
+include::self-sovereign-identity.asciidoc[]
+include::verifiable-credentials.asciidoc[]
+include::decentralized-identifiers.asciidoc[]
+
+include::cyber-physically-protected-systems.asciidoc[]
+
+include::secure-by-design.asciidoc[]
 
