@@ -1,0 +1,39 @@
+digraph blockchain {
+rankdir=RL;
+
+node [fontname=Monospace,fontsize=12]
+//edge [dir = back]
+
+//{ rank = same; 0 1 2 3 4 5 }
+
+"t1" -> "t0"
+
+"t2" -> "t0"
+"t2" -> "t1"
+
+"t3" -> "t0"
+"t3" -> "t2"
+
+"t4" -> "t3"
+"t4" -> "t1"
+
+"t5" -> "t1"
+"t5" -> "t4"
+
+"t6" -> "t2"
+"t6" -> "t5"
+
+"t7" -> "t4"
+"t7" -> "t5"
+
+"t8" -> "t4"
+"t8" -> "t6"
+
+"t9" -> "t5"
+"t9" -> "t7"
+
+"t10" -> "t6"
+"t10" -> "t8"
+
+
+}

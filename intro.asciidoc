@@ -6,16 +6,16 @@
 _New/old_ *technologies* for the _new/old_ web:
 
 === hash function
-It's widely used for data verification and indexing in data storage and crypto protocols.
+It's widely used for data verification and indexing in algorithms, protocols and data storage.
 
 === hash table
-It's used as a quick data index, _O(1)_ overage search time (if no collisions).
+It's used as a quick data index, _O(1)_ overage search time (_if no collisions_).
 
 === merkle tree (hash tree)
-For data blocks (parts of a big one) verification and for proofs in p2p protocols.
+For data blocks (parts of a big one) verification and for proofs in algorithms and protocols.
 
 === distributed hash table (DHT)
-It's used for nodes search in distributed network.
+It's used for nodes search in scalable distributed network for data access.
 
 === symmetric encryption
 For data encryption and decryption by one key.
@@ -24,10 +24,10 @@ For data encryption and decryption by one key.
 For data encryption by one key and decryption by another key, this key pair are linked.
 
 === digital signature
-It's  widely used for data authenticity and verification.
+It's  widely used for data authenticity verification.
 
 === post quantum
-Protocol is _post quantum_ if it can't be hacked by future quantum computers.
+Protocol is _post quantum_ if it can't be hacked by future _quantum computers_ (_in theory_).
 
 === blockchain
 It's growing data (chain of blocks) consistency verification _data structure_ and _technology_ used in _distributed protocols_.
@@ -36,16 +36,16 @@ It's growing data (chain of blocks) consistency verification _data structure_ an
 Same as _blockchain_ but instead of chain of blocks direct acyclic graph is used.
 
 === distributed protocol
-It's a protocol for distributed network of nodes, all participants exchange digitally signed messages to achieve network goals.
+It's a protocol for distributed network of nodes, all participants exchange digitally signed messages to achieve network goals (_state consensus_, _payment channel_, etc. ).
 
 === distributed consensus protocol
-It's a protocol to reach _consensus_ of some state in distributed network of nodes without _trust_.
+It's a protocol to reach _consensus_ of some state in _distributed network_ of nodes without _trust_.
 
 === byzantine fault tolerance (BFT)
-It's a tolerance of distributed network (protocol) to attacks from malicious participants.
+It's a tolerance of _distributed network_ (_distributed protocol_) to attacks from _malicious_ participants.
 
 === zero knowledge proof
-One party (prover) proves to another party (verifier) a knowledge of _x_ without revealing _x_ (zero knowledge of _x_), only _proof_ of _something_ with no other information about that _something_.
+One party (_prover_) proves to another party (_verifier_) a knowledge of _x_ without revealing _x_ (zero knowledge of _x_), only _proof_ of _something_ with no other information about that _something_.
 
 === smart contract
 It's a technology for digital contract's execution in _trustless_ environment, _smart contract_ in simple case can be processed between two parties, or executed for many parties on top of distributed ledger (blockchain) network, participants send _transactions_ to _smart contract_.
@@ -61,13 +61,13 @@ _L2_ is an alias for direct p2p (_off-chain_) protocols constructed on top of  d
 
 
 === payment channel
-It's a _p2p_ protocol (_L2_) for instant payments in any crypto, token or asset.
+It's a _p2p_ protocol (_L2_) for instant payments in any crypto, token or asset (3 steps: open, use, close channel).
 
 === state channel
 Same as payment channel but for any state.
 
 === lightning network
-It's an _L2 network_ (protocol) of _payment/state_ channels and hubs.
+It's an _L2 network_ (protocol) of _payment/state_ channels and hubs of channels.
 
 === distributed application (dapp)
 It's an _app_ runs on top of distributed protocols (_L1/L2_).
@@ -76,7 +76,7 @@ It's an _app_ runs on top of distributed protocols (_L1/L2_).
 It's a digital economy system with custom rules of tokens _emission_, _transfers_, _exchange_, etc., tokens can be _minted_ (_generated_) independently or linked to fiat money or other kind of assets.
 
 === cryptocurrency
-It's a digital currency, usually implemented on top of _distributed ledger_ (_blockchain_) network.
+It's a digital currency (with _crypto_ algorithms usage), usually implemented on top of _distributed ledger_ (_blockchain_) network.
 
 === stablecoin
 Low volatility (stable) digital coin linked somehow to stable asset (fiat money, metal, etc. ).
@@ -85,7 +85,7 @@ Low volatility (stable) digital coin linked somehow to stable asset (fiat money,
 Decentralized finance, decentralized financial applications. It's a _dapp_ that can provide financial services alternatively to traditional financial systems.
 
 === fintech
-Financial technologies applications and services. It's an _app_ that can replace whole bank.
+Financial technologies applications and services. It's an _app_ that can be a financial frontend for endusers and replace whole bank.
 
 === self sovereign identity (SSI)
 It's a concept supported by _w3c_ of independent _digital identity management_.

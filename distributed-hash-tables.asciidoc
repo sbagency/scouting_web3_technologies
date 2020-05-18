@@ -27,12 +27,12 @@ There is no _single point of failure_ or central node, all nodes are equal.
 
 When each node handles info about all other nodes in network it's a best case for quick data search (one hop) but limited scalability (it's hard to update configuration for millions nodes). At a big scale only subset of other nodes is in a configuration list.
 
-Also some data loss prevention meachnism is needed, data can be replicated to many nodes for instance or redundantely encoded and stored on many nodes.
+Also some data loss prevention meachnism is needed, data can be replicated to many nodes for instance or redundantely encoded and stored on many nodes (_reed-solomon_ encoding).
 
 
-Key (address) *_DHT_* can be generated as *_uuid_* or computed as *_hash_* of data, *_uuid_* is location addressing, *_hash_* is content addressing.
+Key (address) can be generated as *_uuid_* or computed as *_hash_* of data, usage of *_uuid_* is location addressing, *_hash_* is content addressing.
 
-*_hash table_* is supported almost by all programming languages and many libraries. *_DHT_* is implemented in distributed protocols (databases and file systems) such as https://ipfs.io/[ipfs].
+*_hash table_* is supported almost by all programming languages and many libraries. *_DHT_* is implemented in distributed protocols (databases and file systems) such as https://ipfs.io/[ipfs] or _bittorent_.
 
 To protect distributed protocols from different kind of attacks *_digital signatures_* and other mechanisms are used.
 
@@ -40,4 +40,4 @@ To protect distributed protocols from different kind of attacks *_digital signat
 It's a technology of cryptograhically and algorithmically protected database (ledger) replicated across many nodes (_same copy on each node_).
 
 === Protected data storage protocol
-You can build your own *_DHT_* protocol optimised for speed and advanced security features. *_DHT_* + *_DLT_* is a good combination (DHT for data, DLT for security(key management, metadata)), have a look at https://filecoin.io/[filecoin], https://sia.tech/[sia] and similar projects.
+You can build your own *_DHT_* protocol optimised for speed and protected by advanced security features. *_DHT_* + *_DLT_* is a good combination (DHT for data, DLT for security(key management, metadata)), have a look at https://filecoin.io/[filecoin], https://sia.tech/[sia] and similar projects.

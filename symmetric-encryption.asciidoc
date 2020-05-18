@@ -20,11 +20,11 @@ It's an alias to input, _plain_ means _unencrypted_.
 KDF generates another key based on input key (derivates), usually KDFs are constructed on _cryptographic hash functions_.
 
 
-Basic form of _symmetric encryption_ are constructed on bitwise xor operation (_encrypted_data_ = _plain text_ xor _key_), to perfection _key_ must be random, unique and size of _key_ must be not less than size of _plai_text_ (that hard to use in practice for big _plain text_).
+Basic form of _symmetric encryption_ are constructed on bitwise xor operation (_encrypted_data_ = _plain text_ xor _key_), to perfection _key_ must be absolutely random, unique and size of _key_ must be not less than size of _plai_text_ (that hard to use in practice for big _plain text_).
 
-More complex _symmetric_encryption_ algoritms are based on _bitmixers_.
+More complex _symmetric_encryption_ algoritms are based on _bitmixers_ of input data and _key_.
 
-Uniqness and randomness of keys are very important. There are many approaches how to generate keys more or less secure. Many vulnerabilities are reasons of bad key generation.
+Uniqness and randomness of keys are very important. There are many approaches how to generate keys more or less secure. Many vulnerabilities are reasons of bad key generation and management.
 
 === brute force attack
 [%hardbreaks]

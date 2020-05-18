@@ -1,0 +1,50 @@
+digraph blockchain {
+//bgcolor=none;
+rankdir=LR;
+
+node [fontname=Monospace,fontsize=12,shape=box]
+//edge [dir = back]
+
+//{ rank = same; 0 1 2 3 4 5 }
+
+"b0" [style=dashed,color=red];
+"b0" -> "b1a"
+
+"b1a" [style=dashed,color=red];
+"b1a" -> "b2a"
+"b1a" -> "b2b"
+
+
+"b2a" [style=filled,color=gray];
+
+"b2b" [style=dashed,color=red];
+
+"b2b" -> "b3a"
+"b2b" -> "b3b"
+"b2b" -> "b3c"
+
+
+"b3a" [style=filled,color=gray];
+
+"b3b" [style=dashed,color=red];
+"b3b" -> "b4a"
+"b3b" -> "b4b"
+
+"b3c" [style=filled,color=gray];
+
+
+"b4b" [style=filled,color=gray];
+"b4b" -> "b5a"
+
+"b4a" [style=dashed,color=red];
+"b4a" -> "b5b"
+"b4a" -> "b5c"
+
+
+"b5b" [style=dashed,color=red];
+"b5b" -> "b6a"
+"b5a" [style=filled,color=gray];
+"b5c" [style=filled,color=gray];
+
+"b6a" [style=dashed,color=red];
+}

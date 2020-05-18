@@ -5,7 +5,7 @@
 Takes any size input, produces fixed size output.
 
 === cryptographic hash function
-It's a *_hash function_* with impossibility to find input by output or  _one way_ function.
+It's a *_hash function_* for which extreamly hard (practically impossible) to find input by output or  _one way_ function.
 
 === collision
 It's a situation when *_hash function_* produces same output for two different inputs.
@@ -32,5 +32,4 @@ It's a binary tree of concatenated (paired) hashes of neigbour data blocks. Whol
 image::images/merkle-tree.png[float="right",align="center"]
 
 _Merkle path_ can be used to verify that data block is a part of whole data array on right place.
-
 

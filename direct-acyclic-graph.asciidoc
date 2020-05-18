@@ -1,6 +1,6 @@
 == direct acyclic graph (DAG)
 [%hardbreaks]
 
-Same as _blockchain_ (verifiable transactions log), but some features: ability to auto-order transactions.
+Same as _blockchain_ (verifiable transactions log), _DAG_ gives an ability to auto-order transactions by some rules, for example each _tx_ should be linked to two previous ones.
 
-
+image::images/direct-acyclic-graph.svg[float="left",align="center"]

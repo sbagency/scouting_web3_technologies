@@ -1,13 +1,17 @@
 == distributed consensus protocols
-It's simply voting and state transition in distributed trustless environment. In theory without central
+It's simply consensus on state transition in distributed network without trust. State transition is processed by ordered list of _transactions_.
 
-State transition is processed by ordered list of _transactions_. It can be done one by one _transaction_ or _blocks_ of _transactions_.
-
-Technically to achieve consensus of state transition each node should send
+Technically to achieve consensus on state transition each node should send _digitally signed_ messages to other nodes. To reduce number of messages one coordinator (block producer) node can be used.
 
 === byzantine fault tolerance (BFT)
 Tolerance to malicious minority of participants.
 
-=== proof of work
-Proof of that computationally hard problem is solved is used to select a member who provides state transition.
+=== proof of work (POW)
+It's a _block producer_ selection mechanism. Proof of that computationally hard problem is solved (_POW_) is used to select a _block producer_ node who provides state transition by one block, for another block - another block producer is selected.
+
+=== proof of stake (POS)
+Same as _POW_ but different selection mechanism among nodes with staked balance is used, bigger stake - bigger chanses to be selected.
+
+Block producers are incentivized by reward.
+
 

@@ -1,13 +1,15 @@
 == blockchain
 [%hardbreaks]
 
-It's a verifiable log of transactions grouped by blocks. Hashes verification: hash of previous block is included in current block, hash of current block is included in next, etc.
+It's a _verifiable_ log of transactions grouped by chained by hashes blocks (_blockchain_). Hashes verification: hash of previous block is included in current block, hash of current block is included in next one, etc.
 
 === transaction
 It's an instructions + data how to change a state. Transaction has a digital signatures of one or multiple senders, this signatures are virified when transaction comes. Transaction may fail at the process of execution (all changes rollback). Transaction logic can be implemented in _smartcontracts_ or hardcoded in core protocol.
 
 === block
-It's a block of transactions, transactions are ordered by some criteria. 
+It's a block of transactions, transactions are ordered by some criteria.
 
 === forks
-In many public distributed _blockchain_ protocols nodes compite to each other to produce blocks, forks of _block chain_ happen, this is necessary to be redundant (fault tolerance). There is a rule of a longest chain to choose which block is last.
+In many public distributed _blockchain_ protocols nodes compite to each other to produce blocks, forks of _block chain_ happen, this is necessary to be redundant (fault tolerant). There is a rule of a longest chain to choose which block is last.
+
+image::images/blockchain.svg[float="left",align="center"]

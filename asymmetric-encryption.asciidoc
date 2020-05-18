@@ -24,6 +24,9 @@ Trustless distributed networks (_DLT_) provide proofs (data in _smart contracts_
 [%hardbreaks]
 Protocol of encrypted channel for many parties can use _public key cryptography_ to exhange shared secret key then messages are symmetrically encypted by this secret key.
 
+=== digital signatures
+Public key cryptography is a foundation for digital signatures. Digital signature can be constructed as encrypted by _secret key_ message hash, to verify encrypted message hash is decrypted by _public key_ and compared with actual message hash, if equal signature is correct.
+
 
 === brute force attack
 [%hardbreaks]
