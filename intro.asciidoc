@@ -5,6 +5,9 @@
 
 _New/old_ *technologies* for the _new/old_ web:
 
+=== web3 == verifiable web
+Web3 is umbrella term but main feature is *_verifiability_*, _no one should trust but verify_. One of the first _verifiable web_ projects is *_bitcoin_*, all transaction history is _verifiable_. Idea is you should trust _math_ not 3d parties.
+
 === hash function
 It's widely used for data verification and indexing in algorithms, protocols and data storage.
 
@@ -29,26 +32,39 @@ It's  widely used for data authenticity verification.
 === post quantum
 Protocol is _post quantum_ if it can't be hacked by future _quantum computers_ (_in theory_).
 
+=== hash links
+It's a consistency verification technique of hashes inclusion in data.
+
+=== verifiable message or data
+Message or data _digitally signed_ by sender and also includes _protocol_ specific verification data.
+
+
 === blockchain
-It's growing data (chain of blocks) consistency verification _data structure_ and _technology_ used in _distributed protocols_.
+It's growing data consistency verification _technology_ mainly used in _distributed protocols_ (chain of blocks with _hash links_ in each block to previous one, block data change is visible and provable failure).
 
 === direct acyclic graph (DAG)
-Same as _blockchain_ but instead of chain of blocks direct acyclic graph is used.
+Same as _blockchain_ but instead of chain of blocks direct acyclic graph is used, vertices of DAG are linked by _hashes_.
 
 === distributed protocol
 It's a protocol for distributed network of nodes, all participants exchange digitally signed messages to achieve network goals (_state consensus_, _payment channel_, etc. ).
 
 === distributed consensus protocol
-It's a protocol to reach _consensus_ of some state in _distributed network_ of nodes without _trust_.
+It's a _distributed protocol_ to reach _consensus_ of some state in _distributed network_ of nodes without _trust_.
 
 === byzantine fault tolerance (BFT)
 It's a tolerance of _distributed network_ (_distributed protocol_) to attacks from _malicious_ participants.
 
+=== permissionless protocol
+Anyone can join distributed network with _permissionless protocol_ without any permission.
+
+=== permissioned protocol
+Only _permissioned_ by some rules or 3d parties nodes are permissioned to join network and participate in protocol.
+
 === zero knowledge proof
-One party (_prover_) proves to another party (_verifier_) a knowledge of _x_ without revealing _x_ (zero knowledge of _x_), only _proof_ of _something_ with no other information about that _something_.
+One party (_prover_) proves to another party (_verifier_) a knowledge of _x_ without revealing _x_ (zero knowledge of _x_), only _proof_ of _something_ with no other information about that _something_. An example: you can proof that you older than 18 but without revealing your actual age.
 
 === smart contract
-It's a technology for digital contract's execution in _trustless_ environment, _smart contract_ in simple case can be processed between two parties, or executed for many parties on top of distributed ledger (blockchain) network, participants send _transactions_ to _smart contract_.
+It's a technology for _verifiable_ digital contract's execution in _trustless_ environment, _smart contract_ in simple case can be processed between two parties, or executed for many parties on top of distributed ledger (blockchain) network, participants send _transactions_ to _smart contract_.
 
 === distributed ledger technology (DLT)
 It's used to process transactions and store verifiable state and transactions log (_verifiable ledger_) in distributed network, each node stores same copy of data as other ones for _byzantine fault tolerance_ (_BFT_).
@@ -91,7 +107,7 @@ Financial technologies applications and services. It's an _app_ that can be a fi
 It's a concept supported by _w3c_ of independent _digital identity management_.
 
 === decentralized identifiers (DIDs)
-Self generated and managed globally unique identifiers are used in decentralized netwoks (protocols).
+Self generated and managed globally unique identifiers are used in decentralized networks (protocols).
 https://www.w3.org/TR/did-core/[W3C Working Draft]
 
 

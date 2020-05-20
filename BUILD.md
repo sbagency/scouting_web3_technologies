@@ -51,5 +51,25 @@ sudo docker build -t adoc-pdf .
 docker run --rm -v $PWD:/doc adoc-pdf asciidoctor-pdf index.asciidoc
 ```
 
+_aspell_
+```Dockerfile
+FROM alpine:latest
+
+VOLUME ["/doc"]
+
+RUN apk update
+RUN apk add aspell aspell-en aspell-ru
+
+RUN rm -rf /var/cache/apk/*
+
+WORKDIR /doc
+```
+
+```bash
+sudo docker build -t aspell .
+docker run --rm -it -v $PWD:/doc aspell sh
+# cp index.asciidoc /tmp
+# aspell check /tmp/index.asciidoc
+```
 
 
