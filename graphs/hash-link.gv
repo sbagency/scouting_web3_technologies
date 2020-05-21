@@ -1,0 +1,38 @@
+digraph hashlink {
+
+    rankdir=LR;
+    node [shape=record];
+
+    //{ rank=same struct1 struct2 struct3 struct4}
+
+subgraph cluster1 {
+    label = "d0";
+    graph [style=dashed,color=gray];
+
+    struct1 [label="<f0> |<f1> 0x0000..|<f2> ...|<f3> ",style=filled,color=black,fillcolor=white];
+}
+
+subgraph cluster2 {
+    label = "d1";
+    graph [style=dashed,color=gray];
+    struct2 [label="<f0> |<f1> 0xa047..|<f2> ...|<f3> ",style=filled,color=black,fillcolor=white];
+}
+
+subgraph cluster3 {
+    label = "d2";
+    graph [style=dashed,color=gray];
+    struct3 [label="<f0> |<f1> 0x3b67..|<f2> ...|<f3> ",style=filled,color=black,fillcolor=white];
+}
+
+subgraph cluster4 {
+    label = "d3";
+    graph [style=dashed,color=gray];
+    struct4 [label="<f0> |<f1> 0x3b67..|<f2> ...|<f3> ",style=filled,color=black,fillcolor=white];
+}
+
+    struct1 -> struct2:f1 [label="hash(d0)" ];
+    struct2 -> struct3:f1 [label="hash(d1)" ];
+    struct2 -> struct4:f1 [label="hash(d1)" ];
+
+
+}
