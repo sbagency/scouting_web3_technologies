@@ -1,10 +1,10 @@
 == distributed consensus protocols
-It's simply consensus on state transition in distributed network without trust. State transition is processed by ordered list of _transactions_.
+It's simply consensus on _state transition_ in distributed network without trust among participants and users (transactions senders). State transition is processed by ordered list of _transactions_, _transactions_ can be grouped by blocks (traffic optimisation).
 
-Technically to achieve consensus on state transition each node should send _digitally signed_ messages to other nodes. To reduce number of messages one coordinator (block producer) node can be used.
+Technically to achieve consensus on _state transition_ each node should send _digitally signed_ messages with some information of _state transition_ to other nodes. To reduce number of messages one coordinator (_block producer_) node is used.
 
 === byzantine fault tolerance (BFT)
-Tolerance to malicious minority of participants.
+Tolerance to malicious minority of participants, formalized as byzantine generals problem.
 
 === proof of work (POW)
 It's a _block producer_ selection mechanism. Proof of that computationally hard problem is solved (_POW_) is used to select a _block producer_ node who provides state transition by one block, for another block - another block producer is selected.

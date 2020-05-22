@@ -6,31 +6,40 @@
 _New/old_ *technologies* for the _new/old_ web:
 
 === web3 == verifiable web
-Web3 is umbrella term but main feature is cryptographically *_verifiability_* and *_traceability_*. One of the first _verifiable web_ projects is *_bitcoin_*, all transaction history explicitly is _traceable_ and _verifiable_ for everyone.
+*_Web3_* is a long time disputed term, for today it's the web that's based on cryptographically *_verifiability_* and *_traceability_*. One of the first _verifiable web3_ projects is *_bitcoin_*, all transaction history is _traceable_ and _verifiable_ by everyone.
 
 === cryptography
-Science of data and computation protection.
+Science of data and computation protection are mostly based on _computation complexity_.
+
+=== one-way function
+Easy to compute function to get output but almost impossible reverse operation find input by output (_computationally complex_).
 
 === hash function
-It's widely used for data verification and indexing in algorithms, protocols and data storage.
+Takes any size input produces fixed size output, widely used for data _verification_ and indexing in algorithms, protocols and data storage.
+
+=== cryptographical hash function
+It's _one-way_ _hash_ function.
 
 === hash table
 It's used as a quick data index, constant overage search time (_if no hash collisions_).
 
 === merkle tree (hash tree)
-For data blocks (parts of a big one) verification and for proofs in algorithms and protocols.
+For data blocks (parts of a big one) consistency _verification_ and for _proofs_ in algorithms and protocols.
 
 === distributed hash table (DHT)
-It's used for nodes search in scalable distributed network for data access.
+It's used for nodes search in _scalable_ distributed network for data access.
 
 === symmetric encryption
-For data encryption and decryption by one key.
+For data encryption and decryption by _one key_.
 
 === asymmetric encryption
-For data encryption by one key and decryption by another key, this key pair are linked.
+For data encryption by _one key_ and decryption by _another key_, this key pair are algoritmically linked.
+
+=== public key cryptography
+It's an _asymmetric encryption_ when one key is _public_ another is _private_, data (message) is encrypted by _public key_, decrypted by _private_.
 
 === digital signature
-It's  widely used for data authenticity verification.
+It's  widely used for data authenticity verification (usually constructed on _cryptographical hash functions_ and _public key cryptography_).
 
 === post quantum
 Protocol is _post quantum_ if it can't be hacked by future _quantum computers_ (_in theory_).
@@ -114,9 +123,10 @@ It's a concept supported by _w3c_ of independent _digital identity management_.
 
 === decentralized identifiers (DIDs)
 Self generated and managed globally unique identifiers are used in decentralized networks (protocols).
-https://www.w3.org/TR/did-core/[W3C Working Draft]
+link:https://www.w3.org/TR/did-core/[W3C Working Draft]
+
 
 
 === verifiable credentials
 Self managed digital credentials that can be issued and verified by 3d parties.
-https://www.w3.org/2017/vc/WG/[W3C Working Group]
+link:https://www.w3.org/2017/vc/WG/[W3C Working Group]

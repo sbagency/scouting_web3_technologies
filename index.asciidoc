@@ -9,7 +9,7 @@
 
 == LICENSE
 
-This copy is for PERSONAL USE ONLY. You may read it for free. You may NOT distribute this book or create derivative work. _web3_tech_ is licensed under CC-BY-NC-ND.
+This copy is for PERSONAL USE ONLY. You may read it for free. You may NOT distribute this book or create derivative work. Book "_scouting web3 technologies_" is licensed under CC-BY-NC-ND.
 
 
 [%hardbreaks]

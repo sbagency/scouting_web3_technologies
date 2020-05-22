@@ -17,3 +17,10 @@ The idea is simple to use pair _secret_,_public_ key only once.
 Many _secret keys_ are generated and _public keys_ _merkle tree_ are built for verification, each _secret key_ is used only once. Any well known algorithm to _sign_ and _verify_ can be used + _merkle tree_ for test. This is a bit over redundant but almost impossible to fake your signature. It's scalable by generating new array of _secret keys_ and _merkel tree_ linked to previous one.
 
 _Lamport signature_ and many other methods are exist to construct _one time_ _digital signatures_. Any custom _protocol_ can be constructed for specific needs.
+
+
+=== hash-based signature schemes
+https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-208-draft.pdf
+
+=== xmss
+https://tools.ietf.org/html/rfc8391

@@ -1,2 +1,25 @@
 == decentralized identifiers (DIDs)
-Self generated and managed globally unique identifiers and distributed/centralized infrastructure (DPKI/PKI) to protect DIDs.
+Self generated and managed globally unique identifiers.
+
+Example doc from  https://www.w3.org/TR/did-core/[w3c did-core]
+
+[source,json]
+----
+{
+  "@context": "https://www.w3.org/ns/did/v1",
+  "id": "did:example:123456789abcdefghi",
+  "authentication": [{
+    
+    "id": "did:example:123456789abcdefghi#keys-1",
+    "type": "RsaVerificationKey2018",
+    "controller": "did:example:123456789abcdefghi",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY...END PUBLIC KEY-----\r\n"
+  }],
+  "service": [{
+    
+    "id":"did:example:123456789abcdefghi#vcs",
+    "type": "VerifiableCredentialService",
+    "serviceEndpoint": "https://example.com/vc/"
+  }]
+}
+----
