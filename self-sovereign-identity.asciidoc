@@ -1,7 +1,7 @@
 == self sovereign identity (SSI)
 [%hardbreaks]
 
-It's a _self digital identity management_. SSI is build on such tech as _digital signatures_, _distributed ledgers_, _zero knoledge proofs_, _decentralized identifiers_ (DIDs), _verifiable credentials_ (VCs), _cryptographically protected protocols_, etc.
+It's a _self digital identity management_. SSI is build on such tech as _digital signatures_, _distributed ledgers_,  _decentralized identifiers_ (DIDs), _verifiable credentials_ (VCs), _cryptographically protected protocols_, etc.
 
 There are W3C documents such as https://www.w3.org/TR/did-core/[DIDs], https://www.w3.org/TR/vc-data-model/[VCs] that can be used in applications.
 

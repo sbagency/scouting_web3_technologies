@@ -1,7 +1,7 @@
 == distributed consensus protocols
 It's simply consensus on _state transition_ in distributed network without trust among participants and users (transactions senders). State transition is processed by ordered list of _transactions_, _transactions_ can be grouped by blocks (traffic optimisation).
 
-Technically to achieve consensus on _state transition_ each node should send _digitally signed_ messages with some information of _state transition_ to other nodes. To reduce number of messages one coordinator (_block producer_) node is used.
+Technically to achieve consensus on _state transition_ each node should send _digitally signed_ messages with some information of _state transition_ to other nodes. To reduce number of messages one coordinator (_block producer_) node is selected each time.
 
 === byzantine fault tolerance (BFT)
 Tolerance to malicious minority of participants, formalized as byzantine generals problem.

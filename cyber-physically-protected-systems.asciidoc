@@ -1,7 +1,7 @@
 == cyber physically protected systems
 
 === hardware wallets
-It's an isolated _cyber physically protected_ hardware device to _sign transactions_ and store private info like _secret keys_ and _passwords_.
+It's an isolated _cyber physically protected_ hardware device to _sign transactions_ and store private info like _secret keys_.
 
-=== hardware security modules (HSM)
+=== hardware security module (HSM)
 It's an isolated _cyber physically protected_ hardware device with advanced crypto functions.

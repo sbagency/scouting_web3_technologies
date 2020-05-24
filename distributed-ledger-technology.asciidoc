@@ -1,8 +1,6 @@
 == distributed ledger technology (DLT)
 
-_DLT_ is an umbrella term for _verifiable_, _traceable_ and _fault tolerant_ state transition distributed protocols (_L1_), _blockhain_ or _DAG_ is used for transaction log (_state transition_ log).
+_DLT_ is an umbrella term for _verifiable_, _traceable_ and _fault tolerant_ state transition distributed protocols (_L1_), _blockhain_ or _DAG_ is used for _state transition_ verifiability.
 
 In basic variant each node stores _same copy_ of data (_ledger_), that's over redundant approach but this _over redundancy_ gives tolerance to failures and malicious attacks.
 
-
-=== transaction malleability

@@ -11,16 +11,13 @@ It's construction when multiple keys (parties) are used to _sign_ data that usua
 === ring signatures
 It's used for privacy preserving. Signature can be produced by any member of a group without revealing who exactly. Verifier can only verify that signature is correct and one of the group memders created this signature.
 
-=== one time signatures (quantum resistant)
-The idea is simple to use pair _secret_,_public_ key only once.
+=== one time signatures
+The idea is simple to use pair (_secret_,_public_) key to sign message/data only once.
 
 Many _secret keys_ are generated and _public keys_ _merkle tree_ are built for verification, each _secret key_ is used only once. Any well known algorithm to _sign_ and _verify_ can be used + _merkle tree_ for test. This is a bit over redundant but almost impossible to fake your signature. It's scalable by generating new array of _secret keys_ and _merkel tree_ linked to previous one.
 
-_Lamport signature_ and many other methods are exist to construct _one time_ _digital signatures_. Any custom _protocol_ can be constructed for specific needs.
+_Lamport signature_ and other methods are exist to construct _one time_ _digital signatures_. Any custom _protocol_ can be constructed for specific needs.
 
 
-=== hash-based signature schemes
-https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-208-draft.pdf
+Examples: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-208-draft.pdf[hash-based signature schemes], https://tools.ietf.org/html/rfc8391[xmss]
 
-=== xmss
-https://tools.ietf.org/html/rfc8391

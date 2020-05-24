@@ -2,9 +2,6 @@ digraph blockchain {
 rankdir=RL;
 
 node [fontname=Monospace,fontsize=12]
-//edge [dir = back]
-
-//{ rank = same; 0 1 2 3 4 5 }
 
 "t1" -> "t0"
 

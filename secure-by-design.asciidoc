@@ -1,2 +1,2 @@
 == secure by design
-There are no _absolutely_ secure systems, all _cryptographically protected protocols_ and _designs_ are based on computational complexity, game theory and other assumptions. With _human factor_, _social engineering_, _side channel attacks_ and other things is almost impossible to build _secure by design_ systems, but this great _challenge_ for brillian minds to the best!
+There are no _absolutely_ secure systems, all _cryptographically protected protocols_ and _designs_ are based on computational complexity, game theory and other assumptions. With _human factor_, _social engineering_, _side channel attacks_ and other things is almost impossible to build _secure by design_ systems, but this great _challenge_ for brillian minds to do the best!

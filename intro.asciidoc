@@ -6,25 +6,25 @@
 _New/old_ *technologies* for the _new/old_ web:
 
 === web3 == verifiable web
-*_Web3_* is a long time disputed term, for today it's the web that's based on cryptographically *_verifiability_* and *_traceability_*. One of the first _verifiable web3_ projects is *_bitcoin_*, all transaction history is _traceable_ and _verifiable_ by everyone.
+*_Web3_* is a long time disputed term, for today it's the web that's based on cryptographical *_verifiability_* and *_traceability_*. One of the first _verifiable web3_ projects is *_bitcoin_*, all transaction history is _traceable_ and _verifiable_ by everyone.
 
 === cryptography
-Science of data and computation protection are mostly based on _computation complexity_.
+Science of data and computation protection that are mostly based on _computation complexity_.
 
 === one-way function
 Easy to compute function to get output but almost impossible reverse operation find input by output (_computationally complex_).
 
 === hash function
-Takes any size input produces fixed size output, widely used for data _verification_ and indexing in algorithms, protocols and data storage.
+Takes any size input produces fixed size output, widely used for data _verification_ and _indexing_ in algorithms, protocols and data storage.
 
 === cryptographical hash function
-It's _one-way_ _hash_ function.
+It's _one-way_ _hash_ function (any size input, fixed size output, almost impossible find input by output).
 
 === hash table
 It's used as a quick data index, constant overage search time (_if no hash collisions_).
 
 === merkle tree (hash tree)
-For data blocks (parts of a big one) consistency _verification_ and for _proofs_ in algorithms and protocols.
+It's used for separate and combined data blocks _verification_, in some protocols _merkle path_ is used (path in a _merkle tree_ from bottom block hash to _merkle root_ hash).
 
 === distributed hash table (DHT)
 It's used for nodes search in _scalable_ distributed network for data access.
@@ -36,7 +36,7 @@ For data encryption and decryption by _one key_.
 For data encryption by _one key_ and decryption by _another key_, this key pair are algoritmically linked.
 
 === public key cryptography
-It's an _asymmetric encryption_ when one key is _public_ another is _private_, data (message) is encrypted by _public key_, decrypted by _private_.
+It's an _asymmetric encryption_ when one key is _public_ another is _private_, data (message) is encrypted by _public key_, decrypted by _private_ key.
 
 === digital signature
 It's  widely used for data authenticity verification (usually constructed on _cryptographical hash functions_ and _public key cryptography_).
@@ -45,35 +45,35 @@ It's  widely used for data authenticity verification (usually constructed on _cr
 Protocol is _post quantum_ if it can't be hacked by future _quantum computers_ (_in theory_).
 
 === hash links
-It's a consistency verification technique of hashes inclusion in data.
+Data hash is a link to this data, if data is changed link is invalid, this usefull for data consistency _verification_ (data immutability).
 
 === verifiable message or data
-Message or data _digitally signed_ by sender and also includes _protocol_ specific verification data.
+Message or data _verifiabilty_ is based on _hashes_, _hash links_,_digital signatures_ and other _protocol_ specific constructions.
 
 
 === blockchain
-It's growing data consistency verification _technology_ mainly used in _distributed protocols_ (chain of blocks with _hash links_ in each block to previous one, block data change is visible and provable failure).
+It's growing data consistency verification _technology_ mainly used in _distributed protocols_ (chain of blocks with _hash links_ in each block to previous one, data block in chain can't be changed _untraceably_).
 
 === direct acyclic graph (DAG)
-Same as _blockchain_ but instead of chain of blocks direct acyclic graph is used, vertices of DAG are linked by _hashes_.
+Same as _blockchain_ but instead of chain of blocks direct acyclic graph is used, DAG nodes are linked by _hashes_, each node includes _hash links_ to two predecessor nodes.
 
 === distributed protocol
-It's a protocol for distributed network of nodes, all participants exchange digitally signed messages to achieve network goals (_state consensus_, _payment channel_ maintainance, etc. ).
+It's a protocol for distributed network of nodes, all participants exchange digitally signed messages to achieve network goals (_state transition consensus_, _payment channel_ maintainance, _transaction_ broadcast, configuration update, etc. ).
 
 === distributed consensus protocol
-It's a _distributed protocol_ to reach _consensus_ of some state in _distributed network_ of nodes without _trust_ to each other.
+It's a _distributed protocol_ to reach _consensus_ of some state transition in _distributed network_ of nodes without _trust_ to each other.
 
 === byzantine fault tolerance (BFT)
-It's a tolerance of _distributed network_ (_distributed protocol_) to attacks from _malicious_ participants.
+It's a tolerance of _distributed network_ (_distributed protocol_) to attacks from _malicious_ participants (internal nodes).
 
 === multi-pary computation (MPC)
-Two or more parties computation protocols with some security requirenments (to keep private inputs secret for example).
+It's two or more parties computation protocols with some security requirenments (to keep private inputs secret for example).
 
 === permissionless protocol
 Anyone can join distributed network with _permissionless protocol_ without any explicit permission.
 
 === permissioned protocol
-Only _permissioned_ by some rules or 3d parties nodes are permissioned to join network and participate in protocol.
+Only _permissioned_ by some rules or 3d parties nodes are permissioned to join network and participate in protocol (network).
 
 === zero knowledge proof
 One party (_prover_) proves to another party (_verifier_) a knowledge of _x_ without revealing _x_ (zero knowledge of _x_), only _proof_ of _something_ with no other information about that _something_. An example: you can prove that you older than 18 but without revealing your actual age.
@@ -82,7 +82,7 @@ One party (_prover_) proves to another party (_verifier_) a knowledge of _x_ wit
 It's a _verifiable_ and _traceable_ digital contract's execution technology of some state transition in _trustless_ environment (for example balances movement in a _ledger_).
 
 === distributed ledger technology (DLT)
-It's used to process _transactions_ and store _ledger_ data in distributed network of nodes without _trust_ to each other, each node stores same copy of data as other ones for _byzantine fault tolerance_.
+It's used to process _transactions_ and store _ledger_ data in distributed network of nodes without _trust_ to each other, each node stores _same_ copy of data as other ones for _byzantine fault tolerance_.
 
 === L1 protocols
 _L1_ is an alias for _distributed ledger_ (_on-chain_) protocols or similar.
@@ -92,13 +92,13 @@ _L2_ is an alias for direct p2p (_off-chain_) protocols constructed on top of  d
 
 
 === payment channel
-It's a _p2p_ protocol (_L2_) for instant payments in any crypto, token or asset (3 steps: open, use, close channel).
+It's an instant payments _p2p_ protocol (_L2_) for two parties.
 
 === state channel
-Same as payment channel but for any state.
+Same as payment channel but for any state transition.
 
 === lightning network
-It's an _L2 network_ (protocol) of _payment/state_ channels and hubs of channels.
+It's an _L2 network_ (protocol) of _payment/state_ channels and hubs of channels. _Payment_ or _state transition_ for two parties can be processed by _lightning network_ without direct _payment/state_ channel.
 
 === distributed application (dapp)
 It's an _app_ runs on top of distributed protocols (_L1/L2_).
@@ -119,7 +119,7 @@ Decentralized finance, decentralized financial applications. It's a _dapp_ that 
 Financial technologies applications and services. It's an _app_ that can be a financial frontend for endusers and replace whole bank.
 
 === self sovereign identity (SSI)
-It's a concept supported by _w3c_ of independent _digital identity management_.
+It's a concept supported by _w3c_ of independent _digital identity management_ by identity owner.
 
 === decentralized identifiers (DIDs)
 Self generated and managed globally unique identifiers are used in decentralized networks (protocols).
@@ -128,5 +128,5 @@ link:https://www.w3.org/TR/did-core/[W3C Working Draft]
 
 
 === verifiable credentials
-Self managed digital credentials that can be issued and verified by 3d parties.
+Self managed digital credentials that can be issued and verified by 3d parties for digital credentials owners.
 link:https://www.w3.org/2017/vc/WG/[W3C Working Group]

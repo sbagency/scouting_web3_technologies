@@ -3,8 +3,6 @@ digraph hashlink {
     rankdir=LR;
     node [shape=record];
 
-    //{ rank=same struct1 struct2 struct3 struct4}
-
 subgraph cluster1 {
     label = "d0";
     graph [style=dashed,color=gray];

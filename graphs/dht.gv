@@ -1,0 +1,88 @@
+digraph g {
+
+graph [layout = circo]
+
+edge [arrowhead="none"]
+
+node [shape=circle]
+
+
+n0 [label="X"]
+n1 [label="Z"]
+n2 [label="N"]
+n3 [label="K"]
+n4 [label="E"]
+
+
+n0 -> n1
+n0 -> n2
+n0 -> n3
+n0 -> n4
+
+n1 -> n2
+n1 -> n3
+n1 -> n4
+
+n2 -> n3
+n2 -> n4
+
+n3 -> n4
+
+
+edge [arrowhead="normal",color=red,style=dashed]
+
+u0 [style=dashed,color=red];
+
+u0 -> n3 [label="0x18037.."]
+n3 -> n0
+n0 -> n3
+n3 -> u0
+
+
+edge [arrowhead="normal",color=blue,style=dashed]
+
+u1 [style=dashed,color=blue];
+
+u1 -> n4 [label="0x40f54.."]
+n4 -> n1
+n1 -> n4
+n4 -> u1
+
+node [shape=box,color=gray,style=dashed]
+edge [arrowhead="none",color=gray,style=dashed]
+
+nn0 [label="0x3ba78.."]
+nn1 [label="0x50f21.."]
+nn2 [label="0x891cb.."]
+nn3 [label="0xa0924.."]
+nn4 [label="0xf3809.."]
+
+//uu0 [label="0x18037.."]
+//uu1 [label="0x40f54.."]
+
+
+nn0 -> n0
+nn1 -> n1
+nn2 -> n2
+nn3 -> n3
+nn4 -> n4
+
+//uu0 -> u0
+//uu1 -> u1
+
+    node1
+    [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+                    <tr><td align="center" port="port1" border="1" color="white"><i>dht conf:</i></td></tr>
+                    <tr><td align="left" port="port2" border="1">X: 0x3ba78..</td></tr>
+                    <tr><td align="left" port="port3" border="1">Z: 0x50f21..</td></tr>
+                    <tr><td align="left" port="port4" border="1">N: 0x891cb..</td></tr>
+                    <tr><td align="left" port="port5" border="1">K: 0xa0924..</td></tr>
+                    <tr><td align="left" port="port6" border="1">E: 0xf3809..</td></tr>
+                </table>>
+    ]
+
+
+
+}

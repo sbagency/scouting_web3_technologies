@@ -1,7 +1,7 @@
 == asymmetric encryption
 [%hardbreaks]
 
-It's an _encryption_ with one _key_ and _decryption_ with another _key_. One _key_ _encrypts_, second _key_ _decrypts_, _decryption_ _key_ is produced from _encryption_ key.
+It's an _encryption_ with one _key_ and _decryption_ with another _key_. One _key_ _encrypts_, second _key_ _decrypts_, _decryption_ _key_ is linked with _encryption_ key.
 
 image::images/asymmetric-encryption.png[float="left",align="center"]
 
@@ -17,15 +17,14 @@ _RSA_ (_Rivest–Shamir–Adleman_) one of the first public key protocols is sti
 Trusted 3d parties provide proofs (_certificates_) for _public keys_.
 
 === distributed public key infrastructure (DPKI)
-Trustless distributed networks (_DLT_) provide proofs (data in _smart contracts_/_transactions_) for _public keys_.
-
+_Distributed ledger/blockchain_ network can be used for _public keys_ infrastructure.
 
 === encrypted channel
 [%hardbreaks]
-Protocol of encrypted channel for many parties can use _public key cryptography_ to exhange shared secret key then messages are symmetrically encypted by this secret key.
+Encrypted channel protocol can be constructed on _public key cryptography_ for encryption key exchange and _symmetric encryption_ for data encryption.
 
 === digital signatures
-Public key cryptography is a foundation for digital signatures. Digital signature can be constructed as encrypted by _secret key_ message hash, to verify encrypted message hash is decrypted by _public key_ and compared with actual message hash, if equal signature is correct.
+Public key cryptography is a foundation for digital signatures. Digital signature can be constructed as encrypted by _secret key_ message hash, to _verify_ encrypted message hash is decrypted by _public key_ and compared with actual message hash, if result is equal signature is correct.
 
 
 === brute force attack

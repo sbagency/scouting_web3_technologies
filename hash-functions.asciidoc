@@ -5,7 +5,7 @@
 Takes any size input, produces fixed size output.
 
 === cryptographic hash function
-It's a *_hash function_* for which extreamly hard (practically impossible) to find input by output or  _one-way_ function.
+It's a *_hash function_* for which extreamly hard (practically impossible) to find input by output or  _one-way_ function with fixed size output.
 
 image::images/hash-func.svg[float="right",align="center"]
 
@@ -15,7 +15,7 @@ It's a situation when *_hash function_* produces same output for two different i
 image::images/collision.svg[float="right",align="center"]
 
 === double hashing
-It's a mechanism to try to resolve hash collisions by _hash function_ usage two times _hash(hash(X))_ but no guaranties.
+It's a mechanism to try to resolve hash collisions by _hash function_ usage two times _hash(hash(X))_ but no guaranties of new collisions.
 
 === perfect hash function
 It's a *_hash function_* without collisions for a specific set of inputs.
@@ -28,7 +28,7 @@ It's used to verify message data integrity and authenticity by _secret key_.
 
 Simple *_hash function_* can be constucted as a logical or arithmetical sum of input data blocks (input can be represented as an array of data blocks for example).
 
-More practical *_hash functions_* are _bit mixers_, with property that one bit change in input produces about half bits change in output (good example _sha256_ used in bitcoin protocol).
+More practical *_cryptographic hash functions_* are _bit mixers_, with property that one bit change in input produces about half bits change in output (good example _sha256_ which is used in _bitcoin_ protocol).
 
 === merkle tree
 It's a binary tree of concatenated (paired) hashes of neigbour data blocks. Whole data can be splited into data blocks. Pair of neighbor blocks hashes is concatenated to produce next level hash, this applies to array of produced hashes untill one hash is left (merkle root). The path from the bottom data block hash to root hash is named as _merle path_.
@@ -37,9 +37,14 @@ image::images/merkle-tree.svg[float="right",align="center"]
 
 _Merkle path_ can be used to verify that data block is a part of whole data array on right place.
 
+=== brute force hashes
+Search target output by changing (_increment_) some input fields repeatedly (_nonce_ or _timestamp_).
+
+image::images/brute-force-hashes.svg[float="right",align="center"]
+
 === hash collision attacks
 Exploitation of _hash_ collisions to substitute data.
 
-=== hash malleability
+
 
 

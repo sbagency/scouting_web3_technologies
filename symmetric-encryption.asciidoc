@@ -28,7 +28,7 @@ Uniqness and randomness of keys are very important. There are many approaches ho
 
 === brute force attack
 [%hardbreaks]
-Attacker repeats different variants of _key_ to decrypt data and test results, some prior information of _key_ generation can be used to reduce number of variants. Modern hardware is able to perform above peta operations per second (>10^15). For example _bitcoin_ _hash rate_ is about exa hashes per second (10^18).
+Attacker repeats different variants of _key_ to decrypt data and test results, some prior information of _key_ generation can be used to reduce number of variants. Modern hardware is able to perform above peta operations per second (>10^15). For example _bitcoin_ _hash rate_ is about exa hashes per second (~10^18).
 
 
 

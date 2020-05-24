@@ -11,19 +11,19 @@ The term _blockchain_ widely used as synonim of _distributed ledger_ protocol wi
 
 === transaction
 [%hardbreaks]
-It's an _instructions + data_ how to change a _state_ (_state transition_). Transaction has a _digital signatures_ of one or multiple _senders_, this signatures are virified when transaction received. Transaction may fail at the process of execution (all changes rollback).
+It's an _instructions + data_ how to change a _state_ (_state transition_). Transaction has a _digital signatures_ of one or multiple _senders_, this signatures are _verified_ when transaction received. Transaction may fail at the process of execution (all changes rollback).
 Transaction logic can uploaded to _distributed ledger_ and used dynamically at runtime in a form of _smartcontracts_, external applications or _hardcoded_ in core _ledger protocol_. Some limited scripts also can be embedded in transaction body to extend protocol functionality.
 
 image::images/transaction.svg[float="left",align="center"]
 
 === block
-It's a block of _transactions_, _transactions_ are ordered by some criteria (this order is verifiable by _merkle hash_ of all transactions, _merkle hash_ is explicitly included in a _block_). Each block is _hash linked_ to previous one, any change of blocks history is traceable.
+It's a block of _transactions_, _transactions_ are ordered by some criteria (this order is verifiable by _merkle hash_ of all transactions, _merkle hash_ is explicitly included in a _block_). Each block is _hash linked_ to previous one, any change of blocks history is _traceable_.
 
 
-image::images/transaction.svg[float="left",align="center"]
+image::images/block.svg[float="left",align="center"]
 
 
 === forks
-In many _permissionless_ distributed _blockchain_ protocols nodes compete to each other to produce blocks, forks of _block chain_ happen, this is necessary to be redundant (fault tolerant). There is a rule of a _longest chain_ to choose which block is last.
+In many _permissionless_ distributed _blockchain_ protocols nodes compete to each other to produce blocks, forks of _block chain_ happen, this is necessary to be redundant (fault tolerant, _BFT_). There is a rule of a _longest chain_ to choose which block is last.
 
 image::images/blockchain.svg[float="left",align="center"]

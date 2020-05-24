@@ -1,0 +1,17 @@
+digraph collision {
+
+rankdir=LR;
+
+
+"A" [style=dashed,color=red,shape=circle];
+"B" [style=dashed,color=red,shape=circle];
+"C" [style=filled,fillcolor=red,color=black,shape=circle];
+"D" [style=dashed,color=red,shape=circle];
+
+
+"A"->"C" [label="hash(A)"];
+"B"->"C" [label="hash(B)"];
+"B"->"D" [label="hash(hash(B))"];
+
+
+}

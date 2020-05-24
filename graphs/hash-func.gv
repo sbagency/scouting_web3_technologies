@@ -1,0 +1,13 @@
+digraph hashfunc {
+
+rankdir=LR;
+
+
+"X" [style=dashed,color=red,shape=circle];
+"Y" [style=dashed,color=red,shape=circle];
+
+
+"X"->"Y" [label="hash(X)"];
+
+
+}

@@ -1,0 +1,12 @@
+digraph oneway {
+
+rankdir=LR;
+
+
+"in" [style=dashed,color=red,shape=circle];
+"out" [style=dashed,color=red,shape=circle];
+
+"in"->"out" [label="one way"];
+
+
+}
