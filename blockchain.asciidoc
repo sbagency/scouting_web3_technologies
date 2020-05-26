@@ -7,17 +7,20 @@ One data includes _hash_ of one another, this inclusion is a link, if linked dat
 image::images/hash-link.svg[float="left",align="center"]
 
 === blockchain protocol
-The term _blockchain_ widely used as synonim of _distributed ledger_ protocol with _blockchain_ _verification_ and _traceability_ technology (based on _hash links_ and _digital signatures_) and _distributed consensus_ mechanism.
+The term _blockchain_ widely used as synonim of _distributed ledger_ protocol with _blockchain_ _verification_ and _traceability_ technology (based on _hash links_ and _digital signatures_) plus _distributed consensus_ mechanism.
 
 === transaction
 [%hardbreaks]
 It's an _instructions + data_ how to change a _state_ (_state transition_). Transaction has a _digital signatures_ of one or multiple _senders_, this signatures are _verified_ when transaction received. Transaction may fail at the process of execution (all changes rollback).
+
+image::images/state-transition-tx.svg[float="left",align="center"]
+
 Transaction logic can uploaded to _distributed ledger_ and used dynamically at runtime in a form of _smartcontracts_, external applications or _hardcoded_ in core _ledger protocol_. Some limited scripts also can be embedded in transaction body to extend protocol functionality.
 
 image::images/transaction.svg[float="left",align="center"]
 
 === block
-It's a block of _transactions_, _transactions_ are ordered by some criteria (this order is verifiable by _merkle hash_ of all transactions, _merkle hash_ is explicitly included in a _block_). Each block is _hash linked_ to previous one, any change of blocks history is _traceable_.
+It's a block of _transactions_ which are ordered by some criteria (this order is verifiable by _merkle hash_ of all transactions, _merkle hash_ is explicitly included in a _block_). Each block is _hash linked_ to previous one, any change of blocks history is _traceable_.
 
 
 image::images/block.svg[float="left",align="center"]

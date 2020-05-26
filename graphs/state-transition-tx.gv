@@ -1,0 +1,46 @@
+digraph state_transition_tx {
+rankdir=TB;
+
+
+subgraph cluster1 {
+    label="block0:[tx0,tx1,tx3,tx4];//tx2 failed"
+
+
+"s0" -> "s1" [label="tx0"];
+"s1" -> "s2" [label="tx1"];
+"s2" -> "s3" [label="tx2"];
+
+"s3" [style=filled,color=lightgray];
+
+"s3" -> "s2" [label="rollback",color=red,style=dashed];
+"s2" -> "s4" [label="tx3"];
+"s4" -> "s5" [label="tx4"];
+
+  }
+
+
+
+subgraph cluster2 {
+    label="block1:[tx5,tx6,tx9,tx10];//tx7,tx8 failed"
+
+
+"s5" -> "s6" [label="tx5"];
+"s6" -> "s7" [label="tx6"];
+"s7" -> "s8" [label="tx7"];
+"s7" -> "s9" [label="tx8"];
+"s7" -> "s10" [label="tx9"];
+"s10" -> "s11" [label="tx10"];
+
+"s8" [style=filled,color=lightgray];
+"s9" [style=filled,color=lightgray];
+
+"s8" -> "s7" [label="rollback",color=red,style=dashed];
+"s9" -> "s7" [label="rollback",color=red,style=dashed];
+
+
+
+  }
+
+
+
+}

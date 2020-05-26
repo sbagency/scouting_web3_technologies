@@ -36,38 +36,38 @@ For data encryption and decryption by _one key_.
 For data encryption by _one key_ and decryption by _another key_, this key pair are algoritmically linked.
 
 === public key cryptography
-It's an _asymmetric encryption_ when one key is _public_ another is _private_, data (message) is encrypted by _public key_, decrypted by _private_ key.
+It's an _asymmetric encryption_ when one key is _public_ another is _private_, in most cases data (message) is encrypted by _public key_, decrypted by _private_ key.
 
 === digital signature
 It's  widely used for data authenticity verification (usually constructed on _cryptographical hash functions_ and _public key cryptography_).
 
 === post quantum
-Protocol is _post quantum_ if it can't be hacked by future _quantum computers_ (_in theory_).
+Protocol or algorithm is _post quantum_ if it can't be hacked by future _quantum computers_ (_in theory_).
 
 === hash links
-Data hash is a link to this data, if data is changed link is invalid, this usefull for data consistency _verification_ (data immutability).
+Data hash is a _link_ to this data or data identifier, if data is changed old link is invalid, this usefull for data consistency _verification_ (data immutability verification).
 
 === verifiable message or data
 Message or data _verifiabilty_ is based on _hashes_, _hash links_,_digital signatures_ and other _protocol_ specific constructions.
 
 
 === blockchain
-It's growing data consistency verification _technology_ mainly used in _distributed protocols_ (chain of blocks with _hash links_ in each block to previous one, data block in chain can't be changed _untraceably_).
+It's a _state transition_ _verification_ and _traceability_ technology mainly used in _distributed ledger protocols_ (chain of transactions blocks with _hash links_ in each block to previous one, data block in chain can't be changed _untraceably_).
 
 === direct acyclic graph (DAG)
-Same as _blockchain_ but instead of chain of blocks direct acyclic graph is used, DAG nodes are linked by _hashes_, each node includes _hash links_ to two predecessor nodes.
+Same as _blockchain_ but instead of chain of transactions blocks _direct acyclic graph_ of blocks or single trabsactions is used, DAG nodes are linked by _hashes_, each node includes _hash links_ to two predecessor nodes, as main feature nodes can be automatically ordered.
 
 === distributed protocol
-It's a protocol for distributed network of nodes, all participants exchange digitally signed messages to achieve network goals (_state transition consensus_, _payment channel_ maintainance, _transaction_ broadcast, configuration update, etc. ).
+It's a protocol for _distributed network_ of nodes with some goals and rules, all participants exchange _digitally signed_ _verifiable_ messages to achieve network goals (_state transition consensus_, _payment channel_ maintainance, _transaction_ broadcast, configuration update, etc. ).
 
 === distributed consensus protocol
-It's a _distributed protocol_ to reach _consensus_ of some state transition in _distributed network_ of nodes without _trust_ to each other.
+It's a _distributed protocol_ to reach _consensus_ of some state transition or someting else in _distributed network_ of nodes without _trust_ to each other. _Consensus protocols_ must be fault tolerant and prevents _malicious_ attacks.
 
 === byzantine fault tolerance (BFT)
-It's a tolerance of _distributed network_ (_distributed protocol_) to attacks from _malicious_ participants (internal nodes).
+It's a tolerance of _distributed network_ (_protocol_) to attacks from _malicious_ participants (internal nodes).
 
 === multi-pary computation (MPC)
-It's two or more parties computation protocols with some security requirenments (to keep private inputs secret for example).
+It's two or more parties computation protocols with some security requirenments (to keep computation inputs secret for example).
 
 === permissionless protocol
 Anyone can join distributed network with _permissionless protocol_ without any explicit permission.
@@ -79,10 +79,10 @@ Only _permissioned_ by some rules or 3d parties nodes are permissioned to join n
 One party (_prover_) proves to another party (_verifier_) a knowledge of _x_ without revealing _x_ (zero knowledge of _x_), only _proof_ of _something_ with no other information about that _something_. An example: you can prove that you older than 18 but without revealing your actual age.
 
 === smart contract
-It's a _verifiable_ and _traceable_ digital contract's execution technology of some state transition in _trustless_ environment (for example balances movement in a _ledger_).
+It's a _verifiable_ and _traceable_ digital contract's execution technology of some _state transition_ or some other computation in _trustless_ environment (for example balances movement in a _ledger_).
 
 === distributed ledger technology (DLT)
-It's used to process _transactions_ and store _ledger_ data in distributed network of nodes without _trust_ to each other, each node stores _same_ copy of data as other ones for _byzantine fault tolerance_.
+It's used to process _state transition_ _transactions_ and store _ledger_ state (data) in _distributed network_ of nodes without _trust_ to each other, each node stores _same_ copy of data as other ones for _fault and attack tolerance_.
 
 === L1 protocols
 _L1_ is an alias for _distributed ledger_ (_on-chain_) protocols or similar.
@@ -92,13 +92,13 @@ _L2_ is an alias for direct p2p (_off-chain_) protocols constructed on top of  d
 
 
 === payment channel
-It's an instant payments _p2p_ protocol (_L2_) for two parties.
+It's an direct payments _p2p_ protocol (_L2_) for two parties.
 
 === state channel
-Same as payment channel but for any state transition.
+Same as _payment channel_ but for any _state transition_.
 
 === lightning network
-It's an _L2 network_ (protocol) of _payment/state_ channels and hubs of channels. _Payment_ or _state transition_ for two parties can be processed by _lightning network_ without direct _payment/state_ channel.
+It's an _L2 network_ (_protocol_) of _payment/state_ channels and _hubs_ of channels. _Payment_ or _state transition_ for two parties can be processed by _lightning network_ without direct _payment/state_ channel.
 
 === distributed application (dapp)
 It's an _app_ runs on top of distributed protocols (_L1/L2_).
@@ -119,14 +119,14 @@ Decentralized finance, decentralized financial applications. It's a _dapp_ that 
 Financial technologies applications and services. It's an _app_ that can be a financial frontend for endusers and replace whole bank.
 
 === self sovereign identity (SSI)
-It's a concept supported by _w3c_ of independent _digital identity management_ by identity owner.
+It's a concept supported by _w3c_ of independent _digital identity management_ by identity owner (user).
 
 === decentralized identifiers (DIDs)
-Self generated and managed globally unique identifiers are used in decentralized networks (protocols).
+Self generated and managed globally unique identifiers which are used in decentralized networks (protocols).
 link:https://www.w3.org/TR/did-core/[W3C Working Draft]
 
 
 
 === verifiable credentials
-Self managed digital credentials that can be issued and verified by 3d parties for digital credentials owners.
+Self managed digital credentials that can be issued and verified by 3d parties for digital credentials owners (users).
 link:https://www.w3.org/2017/vc/WG/[W3C Working Group]
