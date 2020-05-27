@@ -6,7 +6,7 @@ It's an _encryption_ with one _key_ and _decryption_ with another _key_. One _ke
 image::images/asymmetric-encryption.png[float="left",align="center"]
 
 === secrert key generation
-Secret key is a just random bytes, true randomness is mandatory.
+Secret key is a just random bytes, true randomness is mandatory. To keep _secret key_ secret it's stored _symmetrically_ encrypted.
 
 === public key cryptography
 [%hardbreaks]

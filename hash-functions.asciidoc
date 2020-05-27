@@ -23,7 +23,7 @@ It's a *_hash function_* without collisions for a specific set of inputs.
 === preimage
 It's an alias to input of a *_hash function_*.
 
-=== hash-based message authentication code
+=== hash-based message authentication code (MAC)
 It's used to verify message data integrity and authenticity by _secret key_.
 
 Simple *_hash function_* can be constucted as a logical or arithmetical sum of input data blocks (input can be represented as an array of data blocks for example).
