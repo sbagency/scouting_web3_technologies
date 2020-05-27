@@ -13,22 +13,30 @@ It's a symmetric if same key for _encryption_ and _decryption_ are used.
 
 image::images/symmetric-encryption.png[float="left",align="center"]
 
+=== encryption key
+Encryption key is a random bytes.
+
 === plain text
 It's an alias to input, _plain_ means _unencrypted_.
 
 === key derivation function (KDF)
-KDF generates encryption key based on secret and random input parameters (derivates key), usually KDFs are constructed on _cryptographic hash functions_.
+KDF generates new encryption key based on input key and optionally some random parameters (basic KDF is a _cryptographic hash function_). One _master secret key_ generates many other _secret keys_ or just longer _encryption key_.
 
 
-Basic form of _symmetric encryption_ are constructed on bitwise xor operation (_encrypted_data_ = _plain text_ xor _key_), to perfection _key_ must be absolutely random, unique and size of _key_ must be not less than size of _plai_text_ (that hard to use in practice for big _plain text_).
+=== xor encryption
+Basic form of _symmetric encryption_ is constructed on _bitwise xor_ operation (_encrypted_data_ = _plain text_ xor _key_), to perfection _key_ must be absolutely random, unique and size of _key_ must be not less than size of _plai_text_.
 
+
+=== bitmix encryption
 More complex _symmetric_encryption_ algoritms are based on _bitmixers_ of input data and _key_.
+Currently advanced encryption standart (AES) is widely used. AES is supported in Intel microprocessors on hardware level.
 
+=== encryption keys
 Uniqness and randomness of keys are very important. There are many approaches how to generate keys more or less secure. Many vulnerabilities are reasons of bad key generation and management.
 
 === brute force attack
 [%hardbreaks]
-Attacker repeats different variants of _key_ to decrypt data and test results, some prior information of _key_ generation can be used to reduce number of variants. Modern hardware is able to perform above peta operations per second (>10^15). For example _bitcoin_ _hash rate_ is about exa hashes per second (~10^18).
+Attacker repeats different variants of _key_ to decrypt data and test results, some prior information of _key_ generation can be used to reduce number of variants. Modern hardware is able to perform above peta operations per second (>10^15) on a single chip.
 
 
 

@@ -5,6 +5,9 @@ It's an _encryption_ with one _key_ and _decryption_ with another _key_. One _ke
 
 image::images/asymmetric-encryption.png[float="left",align="center"]
 
+=== secrert key generation
+Secret key is a just random bytes, true randomness is mandatory.
+
 === public key cryptography
 [%hardbreaks]
 It's an _asymmetric encryption_ protocol, when participants generates key pairs: _private_, _public_ keys. _Public key_ is public and used to encrypt _messages_. _Private_ key is secret and used to decrypt messages. One party can send an encrypted by _public key_ a message to another party. Message is decrypted by _secret_ _key_.
@@ -13,22 +16,29 @@ Trusted 3d party is required to provide _certificates_ for _public keys_.
 
 _RSA_ (_Rivest–Shamir–Adleman_) one of the first public key protocols is still widely used.
 
+=== public key certificate
+Digital documet with public key and other meta signed by trusted 3d party key.
+
 === public key infrastructure (PKI)
-Trusted 3d parties provide proofs (_certificates_) for _public keys_.
+Trusted 3d parties provide validity proofs (_certificates_) for users _public keys_.
 
 === distributed public key infrastructure (DPKI)
-_Distributed ledger/blockchain_ network can be used for _public keys_ infrastructure.
+_Distributed ledger_ network can be used for _public keys_ infrastructure support.
 
 === encrypted channel
 [%hardbreaks]
-Encrypted channel protocol can be constructed on _public key cryptography_ for encryption key exchange and _symmetric encryption_ for data encryption.
+Encrypted channel protocol can be constructed on _public key cryptography_ or _Diffie–Hellman method_ for _encryption key_ exchange and _symmetric encryption_ for data _encryption_.
 
 === digital signatures
-Public key cryptography is a foundation for digital signatures. Digital signature can be constructed as encrypted by _secret key_ message hash, to _verify_ encrypted message hash is decrypted by _public key_ and compared with actual message hash, if result is equal signature is correct.
+Public key cryptography is a foundation for _digital signatures_. Digital signature can be constructed as encrypted by _secret key_ message hash, to _verify_ encrypted message hash is decrypted by _public key_ and compared with actual message hash, if result is equal signature is correct.
 
 
 === brute force attack
 [%hardbreaks]
 Attacker repeats different variants of _secret key_ to produce _public key_, some prior information of _key_ generation can be used to reduce number of variants.
+
+
+=== man in the middle attack (MITM)
+Man in the middle can intercept traffic and manipulate keys, decrypt/read/encrypt messages, fake digital signatures if parties communicate only over middle man. To prevent MITM attacks PKI/DPKI exists.
 
 

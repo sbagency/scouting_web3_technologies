@@ -15,7 +15,7 @@ It's a _verifiable_,_traceable_, some _faults_ and _attacks_ tolerant _state tra
 === transaction
 [%hardbreaks]
 It's an _instructions + data_ how to change a _state_ (_state transition_). Transaction has a _digital signatures_ of one or multiple _senders_, this signatures are _verified_ when transaction received. Transaction may fail at the process of execution (all changes rollback). Transactions manipulate participants addresses, for instance transfer balance from one address to another.
-For financial transactions there are two models of state maintenance: _unspent transaction output_ and _account/balance_.
+For financial transactions there are two models of state maintenance: _unspent transaction output_ and _account/balance_ record.
 
 === unspent transaction output (UTXO)
 State transition of money balances in a ledger can be represented as direct graph of transactions, each transaction (graph node) has an inputs and outputs of money spendings, current address balance that's available for spending is a sum of unspent outputs (can be spend by address digital signature).
