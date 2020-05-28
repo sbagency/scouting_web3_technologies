@@ -2,23 +2,27 @@
 [%hardbreaks]
 
 === hash links
-One data includes _hash_ of one another, this inclusion is a link, if linked data is changed then verification (comparison of included _hash_ to actual _hash_) will fail, _hash links_ are only single-directional (u know why).
+One data includes _hash_ of one another, this inclusion is a link, if linked data is changed then _verification_ (comparison of included _hash_ to actual _hash_) will fail, _hash links_ are only single-directional (u know why).
 
 image::images/hash-link.svg[float="left",align="center"]
 
 === address
-Participants of blockchain protocol are identified by _cryptographically_ constructed _addresses_. _Address_ is produced from _public key_ of protocol participant (usually unique _address_ = hash(_public key_) + some check and info data). Address is directly linked with participant's _public key_.
-
-=== blockchain protocol
-It's a _verifiable_,_traceable_, some _faults_ and _attacks_ tolerant _state transition_ _distributed protocol_ (based on _hash links_, _digital signatures_, _transactions_, _blocks_ and _distributed consensus_ algorithm).
+Participants of _blockchain protocol_ are identified by _cryptographically_ constructed _addresses_. _Address_ is produced from _public key_ of protocol participant (usually unique _address_ = hash(_public key_) + some check and info data). Address is directly linked with participant's _public key_.
 
 === transaction
 [%hardbreaks]
-It's an _instructions + data_ how to change a _state_ (_state transition_). Transaction has a _digital signatures_ of one or multiple _senders_, this signatures are _verified_ when transaction received. Transaction may fail at the process of execution (all changes rollback). Transactions manipulate participants addresses, for instance transfer balance from one address to another.
-For financial transactions there are two models of state maintenance: _unspent transaction output_ and _account/balance_ record.
+It's an _instructions + data_ how to change a _state_ (_state transition_). Transaction has a _digital signatures_ of one or multiple _senders_, this signatures are _verified_ when transaction received. Transaction may fail at the process of execution (all changes rollback). Transactions manipulate state of ledger, for instance transfer balance from one address to another.
+For financial transactions there are two models of state maintenance: _unspent transaction outputs_ and _account/balance_ records.
+
+=== blockchain protocol
+It's a _verifiable_, _traceable_ _state transition_ protocol, state transition is processed by blocks of _transactions_, each next block has a _hash link_ to previous one (verifiable chain of blocks), all state transitions (by transactions) are _traceable_ and _verifiable_. Usually state is stored in a ledger database.
+
+
+=== distributed blockchain protocol
+It's a _blockchain protocol_ for _distributed network_ of nodes, usually same copy of state is stored in a distributed ledger database. Distributed consensus protocol is used to achive consensus of state transitions among nodes.
 
 === unspent transaction output (UTXO)
-State transition of money balances in a ledger can be represented as direct graph of transactions, each transaction (graph node) has an inputs and outputs of money spendings, current address balance that's available for spending is a sum of unspent outputs (can be spend by address digital signature).
+State transition of money balances in a ledger can be represented as direct graph of transactions, each transaction (graph node) has an inputs and outputs of money spendings, any address balance that's available for spending is a sum of unspent outputs (can be spend by address digital signature).
 
 === account balances
 Account balance can be represented as a record in a ledger that can be modified by transactions. Current address balance is a current record state.
