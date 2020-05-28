@@ -1,0 +1,71 @@
+digraph utxo {
+
+graph [ rankdir = LR ]
+
+node [
+      fontname = "Arial"
+      fontsize = 11
+      shape = "record"
+      ]
+
+
+
+tx0->A0 [label=0.6]
+tx1->B0 [label=1.1]
+tx2->C0 [label=2.9]
+
+
+A0->tx3[label=0.6]
+B0->tx4[label=1.1]
+C0->tx4[label=2.9]
+
+tx3->A1[label=0.1]
+tx3->B1[label=0.5]
+
+
+//4
+tx4->A2[label=0.2]
+tx4->B2[label=1.5]
+tx4->C2[label=2.3]
+
+B2->tx5[label=1.5]
+
+tx5->B3[label=1.0]
+tx5->C3[label=0.5]
+
+
+C2 ->tx6[style=invis]
+tx6->C4[label=0.5]
+
+
+
+
+A0 [shape=none,label=A]
+A1 [shape=box,style=dashed,color=red,label=A]
+A2 [shape=box,style=dashed,color=red,label=A]
+
+B0 [shape=none,label=B]
+B1 [shape=box,style=dashed,color=red,label=B]
+B2 [shape=none,label=B]
+B3 [shape=box,style=dashed,color=red,label=B]
+
+C0 [shape=none,label=C]
+//C1 [shape=none]
+C2 [shape=box,style=dashed,color=red,label=C]
+C3 [shape=box,style=dashed,color=red,label=C]
+C4 [shape=box,style=dashed,color=red,label=C]
+
+
+    node1
+    [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+                    <tr><td align="center" port="port1" border="1" color="white"><i>utxo sum:</i></td></tr>
+                    <tr><td align="left" port="port2" border="1">A: 0.3</td></tr>
+                    <tr><td align="left" port="port3" border="1">B: 1.5</td></tr>
+                    <tr><td align="left" port="port4" border="1">C: 3.3</td></tr>
+                </table>>
+    ]
+
+C2 ->node1:port1[style=invis]
+}
