@@ -11,7 +11,7 @@ It's a process that decrypts an encrypted input to plain output.
 [%hardbreaks]
 It's a symmetric if same key for _encryption_ and _decryption_ are used.
 
-image::images/symmetric-encryption.png[float="left",align="center"]
+image::images/symmetric-encryption.svg[float="left",align="center"]
 
 === encryption key
 Encryption key is a random bytes.
@@ -33,10 +33,10 @@ Currently advanced encryption standart (AES) is widely used. AES is supported in
 === encryption keys
 Uniqness and randomness of keys are very important. There are many approaches how to generate keys more or less secure. Many vulnerabilities are reasons of bad key generation and management.
 
-=== usage example
-Example of ethereum keystore file (password (secret phrase) encrypted _private key_):
+=== encryption example
+Example of ethereum keystore file, data is encrypted by AES with KDF usage, _ciphertext=aes(cipherparams,kdf(password),data)_:
 [source,json]
----
+----
 {
     "version": 3,
     "id": "cfe42579-c02b-4819-ad5b-2a9d2e3e9c0f",
@@ -58,13 +58,15 @@ Example of ethereum keystore file (password (secret phrase) encrypted _private k
         "mac": "7aa99c2cc2bc1960b0a95981984418745e49d96ff8857823d6a1b337a7a45a0d"
     }
 }
----
+----
 
 
 === brute force attack
 [%hardbreaks]
 Attacker repeats different variants of _key_ to decrypt data and test results, some prior information of _key_ generation can be used to reduce number of variants. Modern hardware is able to perform above peta operations per second (>10^15) on a single chip.
 
+=== dictionary attack
+Attacker uses dictionary of common passwords and words combinations to make _brute force attack_.
 
 
 

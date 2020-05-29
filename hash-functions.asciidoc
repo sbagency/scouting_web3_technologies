@@ -24,11 +24,12 @@ It's a *_hash function_* without collisions for a specific set of inputs.
 It's an alias to input of a *_hash function_*.
 
 === hash-based message authentication code (MAC)
-It's used to verify message data integrity and authenticity by _secret key_.
+It's used to verify message data integrity and authenticity by _secret key_ usage, _mac = hash(data + secret key)_.
 
-Simple *_hash function_* can be constucted as a logical or arithmetical sum of input data blocks (input can be represented as an array of data blocks for example).
+=== hash function design
+Simple *_hash function_* can be constucted as a logical or arithmetical sum of input data blocks (input can be represented as an array of data blocks), result sum size can be reduced by _mod_ operation.
 
-More practical *_cryptographic hash functions_* are _bit mixers_, with property that one bit change in input produces about half bits change in output (good example _sha256_ which is used in _bitcoin_ protocol).
+More practical *_cryptographic hash functions_* are _bit mixers_, with property that one bit change in input produces about half bits change in output (good example _sha256_ which is used in _bitcoin_ and many other protocols).
 
 === merkle tree
 It's a binary tree of concatenated (paired) hashes of neigbour data blocks. Whole data can be splited into data blocks. Pair of neighbor blocks hashes is concatenated to produce next level hash, this applies to array of produced hashes untill one hash is left (merkle root). The path from the bottom data block hash to root hash is named as _merle path_.

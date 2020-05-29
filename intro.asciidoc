@@ -61,7 +61,7 @@ Same as _blockchain_ but instead of chain of transactions blocks _direct acyclic
 It's a protocol for _distributed network_ of nodes with some goals and rules, all participants exchange _digitally signed_ _verifiable_ messages to achieve network goals (_state transition consensus_, _payment channel_ maintainance, _transaction_ broadcast, configuration update, etc. ).
 
 === distributed consensus protocol
-It's a _distributed protocol_ to reach _consensus_ of some state transition or someting else in _distributed network_ of nodes without _trust_ to each other. _Consensus protocols_ must be fault tolerant and prevent _malicious_ attacks.
+It's a _distributed protocol_ to reach _consensus_ of some state transition or something else in _distributed network_ of nodes without _trust_ to each other. _Consensus protocols_ must be fault tolerant and prevent _malicious_ attacks (of course if majority of nodes _malicious_ it's almost impossible to handle it (51% attack)).
 
 === byzantine fault tolerance (BFT)
 It's a tolerance of _distributed network_ (_protocol_) to attacks from _malicious_ participants (internal nodes), historically this problem is known as _byzantine generals problem_.
@@ -79,7 +79,7 @@ Only _permissioned_ by some rules or 3d parties nodes are permissioned to join n
 One party (_prover_) proves to another party (_verifier_) a knowledge of _x_ without revealing _x_ (zero knowledge of _x_), only _proof_ of _something_ with no other information about that _something_. An example: you can prove that you older than 18 but without revealing your actual age.
 
 === smart contract
-It's a _verifiable_ and _traceable_ digital contract's execution technology of some _state transition_ or some other computation in _trustless_ environment (for example balances movement in a _ledger_).
+It's a _verifiable_ and _traceable_ digital contract's execution technology of some _state transition_ or some other computation in _trustless_ environment (for example money transfer in a _ledger_).
 
 === distributed ledger technology (DLT)
 It's used to process _state transition_ _transactions_ and store _ledger_ state (data) in _distributed network_ of nodes without _trust_ to each other, each node stores _same_ copy of data as other ones for _fault and attack tolerance_.

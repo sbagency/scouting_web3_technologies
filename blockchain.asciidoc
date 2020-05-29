@@ -14,6 +14,17 @@ Participants of _blockchain protocol_ are identified by _cryptographically_ cons
 It's an _instructions + data_ how to change a _state_ (_state transition_). Transaction has a _digital signatures_ of one or multiple _senders_, this signatures are _verified_ when transaction received. Transaction may fail at the process of execution (all changes rollback). Transactions manipulate state of a ledger, for instance transfer balance from one address to another.
 For financial transactions there are two models of state maintenance: _unspent transaction outputs_ and _account/balance_ records. Technically _transaction_ is a binary record with some fields and digital signatire(s) of this fields.
 
+
+Transaction logic can be uploaded to _distributed ledger_ and used dynamically at runtime in a form of _smartcontracts_ or external applications or _hardcoded_ in core _ledger protocol_. Some limited scripts also can be embedded in transaction body to extend protocol functionality.
+
+image::images/transaction.svg[float="left",align="center"]
+
+=== block
+It's a block of _transactions_ which are ordered by some criteria (this order is _verifiable_ by _merkle hash_ of all transactions, _merkle hash_ is explicitly included in a _block_). Each block is _hash linked_ to previous one, any change of blocks history is _traceable_.
+
+
+image::images/block.svg[float="left",align="center"]
+
 === blockchain protocol
 It's a _verifiable_, _traceable_ _state transition_ protocol, state transition is processed by blocks of _transactions_, each next block has a _hash link_ to previous one (verifiable chain of blocks), all state transitions (by transactions) are _traceable_ and _verifiable_. Usually state is stored in a ledger database.
 
@@ -29,16 +40,6 @@ image::images/utxo.svg[float="left",align="center"]
 
 === account balances
 Account balance can be represented as a record in a ledger that can be modified by transactions. Current address balance is a current record state.
-
-Transaction logic can be uploaded to _distributed ledger_ and used dynamically at runtime in a form of _smartcontracts_ or external applications or _hardcoded_ in core _ledger protocol_. Some limited scripts also can be embedded in transaction body to extend protocol functionality.
-
-image::images/transaction.svg[float="left",align="center"]
-
-=== block
-It's a block of _transactions_ which are ordered by some criteria (this order is _verifiable_ by _merkle hash_ of all transactions, _merkle hash_ is explicitly included in a _block_). Each block is _hash linked_ to previous one, any change of blocks history is _traceable_.
-
-
-image::images/block.svg[float="left",align="center"]
 
 
 === forks

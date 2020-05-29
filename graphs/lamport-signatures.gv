@@ -1,0 +1,121 @@
+digraph tx {
+
+    rankdir=LR;
+
+
+subgraph cluster1 {
+    label = "private key";
+    node1
+    [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+                    <tr><td align="center" port="port0" border="1" color="white"><i>random X</i></td></tr>
+                    <tr><td align="left" port="port1" border="1">0:0x82b6a0..</td></tr>
+                    <tr><td align="left" port="port2" border="1">1:0x0982cc..</td></tr>
+                    <tr><td align="center" port="port3" border="1">...</td></tr>
+                    <tr><td align="left" port="port4" border="1">n-1:0xf54100..</td></tr>
+                </table>>
+    ]
+
+    node2
+    [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+                    <tr><td align="center" port="port0" border="1" color="white"><i>random Y</i></td></tr>
+                    <tr><td align="left" port="port1" border="1">0:0x096cc2..</td></tr>
+                    <tr><td align="left" port="port2" border="1">1:0x164598..</td></tr>
+                    <tr><td align="center" port="port3" border="1">...</td></tr>
+                    <tr><td align="left" port="port4" border="1">n-1:0xbf4522..</td></tr>
+                </table>>
+    ]
+
+}
+
+
+subgraph cluster2 {
+    label = "public key";
+    node12
+    [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+                    <tr><td align="center" port="port0" border="1" color="white"><i>hash(X)</i></td></tr>
+                    <tr><td align="left" port="port1" border="1">0:0xf56c09..</td></tr>
+                    <tr><td align="left" port="port2" border="1">1:0x51b567..</td></tr>
+                    <tr><td align="center" port="port3" border="1">...</td></tr>
+                    <tr><td align="left" port="port4" border="1">n-1:0x123bb0..</td></tr>
+                </table>>
+    ]
+
+    node22
+    [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+                    <tr><td align="center" port="port0" border="1" color="white"><i>hash(Y)</i></td></tr>
+                    <tr><td align="left" port="port1" border="1">0:0x983614..</td></tr>
+                    <tr><td align="left" port="port2" border="1">1:0x892b45..</td></tr>
+                    <tr><td align="center" port="port3" border="1">...</td></tr>
+                    <tr><td align="left" port="port4" border="1">n-1:0xff3490..</td></tr>
+                </table>>
+    ]
+
+}
+
+
+    node3
+    [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+                    <tr><td align="center" port="port0" border="1" color="white"><i>data</i></td></tr>
+                    <tr><td align="left" port="port1" border="1">0:0</td></tr>
+                    <tr><td align="left" port="port2" border="1">1:1</td></tr>
+                    <tr><td align="center" port="port3" border="1">...</td></tr>
+                    <tr><td align="left" port="port4" border="1">n-1:0</td></tr>
+                </table>>
+    ]
+
+
+    node4
+    [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+                    <tr><td align="center" port="port0" border="1" color="white"><i>signature</i></td></tr>
+                    <tr><td align="left" port="port1" border="1">0:0x82b6a0</td></tr>
+                    <tr><td align="left" port="port2" border="1">1:0x164598</td></tr>
+                    <tr><td align="center" port="port3" border="1">...</td></tr>
+                    <tr><td align="left" port="port4" border="1">n-1:0xf54100</td></tr>
+                </table>>
+    ]
+
+/*
+subgraph cluster3 {
+    label = "verify";
+    node5
+    [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+                    <tr><td align="center" port="port0" border="1" color="white"><i>verify(X)</i></td></tr>
+                    <tr><td align="left" port="port1" border="1">0:0xf56c09..</td></tr>
+                    <tr><td align="left" port="port2" border="1">1:0x51b567..</td></tr>
+                    <tr><td align="center" port="port3" border="1">...</td></tr>
+                    <tr><td align="left" port="port4" border="1">n-1:0x123bb0..</td></tr>
+                </table>>
+    ]
+
+}
+*/
+
+
+node1:port0->node3:port0 [style=invis];
+node3:port0->node12:port0[style=invis];
+node1:port1->node4:port1;
+node2:port2->node4:port2;
+node1:port4->node4:port4;
+
+node4:port1->node12:port1[arrowhead="none",label="?",style=dashed,clor=gray];
+node4:port2->node22:port2[arrowhead="none",label="?",style=dashed,clor=gray];
+node4:port4->node12:port4[arrowhead="none",label="?",style=dashed,clor=gray];
+//node3:port1->node4:port1[label="0",style=dashed];
+//node3:port2->node4:port2[label="1",style=dashed];
+
+
+}

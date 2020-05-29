@@ -1,0 +1,28 @@
+digraph digitalsignatures {
+
+//rankdir=LR;
+node [shape=box]
+
+"sk" [label="secret key", style=dashed,color=red];
+"pk" [label="public key", style=dashed,color=red];
+"sig1" [label="signature"]
+"sig2" [label="signature"]
+
+"d1" [label="data"]
+"d2" [label="data"]
+
+"d1" -> "encryption" [label="hash(data)"]
+"sk" -> "encryption"
+
+"encryption" -> "sig1"
+
+
+"sig2" -> "decryption"
+"pk" -> "decryption"
+
+"decryption" -> "verify"
+"d2" -> "verify" [label="hash(data)"]
+
+"verify" -> "ok" [label="?"]
+
+}
