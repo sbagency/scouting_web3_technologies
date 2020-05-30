@@ -29,36 +29,10 @@ Basic form of _symmetric encryption_ is constructed on _bitwise xor_ operation (
 === bitmix encryption
 More complex _symmetric_encryption_ algoritms are based on _bitmixers_ of input data and _key_.
 Currently advanced encryption standart (AES) is widely used. AES is supported in Intel microprocessors on hardware level.
+The problem is modern encryption standards (AES) are block ciphers, there is an encryption of fixed size blocks.
 
 === encryption keys
 Uniqness and randomness of keys are very important. There are many approaches how to generate keys more or less secure. Many vulnerabilities are reasons of bad key generation and management.
-
-=== encryption example
-Example of ethereum keystore file, data is encrypted by AES with KDF usage, _ciphertext=aes(cipherparams,kdf(password),data)_:
-[source,json]
-----
-{
-    "version": 3,
-    "id": "cfe42579-c02b-4819-ad5b-2a9d2e3e9c0f",
-    "address": "524822dcf784832a7c0f6bca718e8e9481f0d52e",
-    "crypto": {
-        "ciphertext": "db0a5afe37927a860511ebdc32191ef98e1ac7e17ce4bdeb9d841177fc673a12",
-        "cipherparams": {
-            "iv": "4243aab386f2c4679f4d96dfd93a693e"
-        },
-        "cipher": "aes-128-ctr",
-        "kdf": "scrypt",
-        "kdfparams": {
-            "dklen": 32,
-            "salt": "16d187c2ea4c1b1456c00f87e0bc43f74ac4fe229ca4f0d763b2d93ece1db3f2",
-            "n": 131072,
-            "r": 8,
-            "p": 1
-        },
-        "mac": "7aa99c2cc2bc1960b0a95981984418745e49d96ff8857823d6a1b337a7a45a0d"
-    }
-}
-----
 
 
 === brute force attack
