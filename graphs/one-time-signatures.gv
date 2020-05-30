@@ -1,0 +1,81 @@
+digraph hierarchy {
+node [shape=box]
+
+edge [dir = back]
+
+"H10" [color=red];
+"H10" -> "H8"
+"H10" -> "H88"[style=invis];
+"H88" [label="",shape=none];
+"H10" -> "H9" //[style=dashed,color=red];
+
+"H8" -> "H5"
+"H8" -> "H6" // [style=dashed,color=red];
+"H9";// [style=dashed,color=red];
+"H9" -> "H7"
+"H9" -> "H77" [style=dashed];
+
+"H5" -> "H0"
+"H5" -> "H1"
+"H6" -> "H2"
+"H6" -> "H3" [style=invis];//[style=dashed,color=red];
+"H77" -> "H3"[style=invis];
+"H6";// [style=dashed,color=red];
+"H7" -> "H4"
+
+"H7" -> "H3" [style=dashed]
+
+
+"H77" [label="...",shape=none];
+
+
+"H10" [label="H"];
+"H8" [label="H"];
+"H9" [label="H"];
+"H7" [label="H"];
+"H6" [label="H"];
+"H5" [label="H"];
+
+"H6" -> "H3" [style=dashed]
+
+"H0" [label="Pk0"];
+"H1" [label="Pk1"];
+"H2" [label="Pk2"];
+"H3" [label="...",shape=none];
+"H4" [label="Pkn-1"];
+
+
+"H0" -> "P0"
+"H1" -> "P1"
+"H2" -> "P2"
+"H3" -> "P3" [style=invis];
+"H3" [label="...",shape=none];// [style=dashed,color=red];
+"H4" -> "P4"
+
+"P0" [label="Sk0",style=filled];
+"P1" [label="Sk1",style=filled];
+"P2" [label="Sk2",style=filled];
+"P3" [label="...",shape=none];
+"P4" [label="Skn-1",style=filled];
+
+/*
+"P0" -> "S0"
+"P1" -> "S1"
+"P2" -> "S2"
+"P3" -> "S3" [style=invis];
+"P4" -> "S4"
+"P5" -> "S5"
+
+
+
+
+"S0" [label="Sk0",style=filled];
+"S1" [label="Sk1",style=filled];
+"S2" [label="Sk2",style=filled];
+"S3" [label="...",shape=none];
+"S4" [label="Skn-1",style=filled];
+"S5" [label="Skn",style=filled];
+
+*/
+
+}
