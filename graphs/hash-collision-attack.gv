@@ -1,0 +1,43 @@
+digraph hca {
+
+    rankdir=LR;
+
+    node2
+    [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+                    <tr><td align="center" port="port1" border="0" color="white"><i>data</i></td></tr>
+                    <tr><td align="left" port="port2" border="1">...</td></tr>
+                    <tr><td align="left" port="port3" border="1" bgcolor="lightgray">address: 0x5bcf09..</td></tr>
+                    <tr><td align="left" port="port4" border="1">...</td></tr>
+                    <tr><td align="left" port="port5" border="1" bgcolor="lightgray">timestemp:  1590049607</td></tr>
+                    <tr><td align="left" port="port6" border="1">...</td></tr>
+                    <tr><td align="center" port="port7" border="0" color="white"><i>hash(data)=0x5a0c34..</i></td></tr>
+                </table>>
+    ]
+
+    "N" [label="...",shape=none]
+
+
+
+    node3
+    [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+                    <tr><td align="center" port="port1" border="0" color="white"><i>data</i></td></tr>
+                    <tr><td align="left" port="port2" border="1">...</td></tr>
+                    <tr><td align="left" port="port3" border="1" bgcolor="red">address: 0xc56efa..</td></tr>
+                    <tr><td align="left" port="port4" border="1">...</td></tr>
+                    <tr><td align="left" port="port5" border="1" bgcolor="red">timestemp:  1421234443</td></tr>
+                    <tr><td align="left" port="port6" border="1">...</td></tr>
+                    <tr><td align="center" port="port7" border="0"><i>hash(data)=0x5a0c34..</i></td></tr>
+                </table>>
+    ]
+
+
+    node2:port4->N [style=invis];
+
+    N->node3:port4 [style=invis];
+
+
+}

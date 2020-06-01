@@ -8,14 +8,55 @@ digraph bfh {
         label = <<table border="0" cellspacing="0">
                     <tr><td align="center" port="port1" border="0" color="white"><i>data</i></td></tr>
                     <tr><td align="left" port="port2" border="1">...</td></tr>
-                    <tr><td align="left" port="port3" border="1" bgcolor="red">nonce: 6278330123</td></tr>
+                    <tr><td align="left" port="port3" border="1" bgcolor="lightgray">nonce: 6278330123</td></tr>
                     <tr><td align="left" port="port4" border="1">...</td></tr>
-                    <tr><td align="left" port="port5" border="1" bgcolor="red">timestemp:  1590049607</td></tr>
+                    <tr><td align="left" port="port5" border="1" bgcolor="lightgray">timestemp:  1590049607</td></tr>
                     <tr><td align="left" port="port6" border="1">...</td></tr>
                     <tr><td align="center" port="port1" border="0" color="white"></td></tr>
                     <tr><td align="center" port="port1" border="0" color="white"><i>hash(data)=0x8073a7..</i></td></tr>
                 </table>>
     ]
+
+
+    node2
+    [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+                    <tr><td align="center" port="port1" border="0" color="white"><i>data</i></td></tr>
+                    <tr><td align="left" port="port2" border="1">...</td></tr>
+                    <tr><td align="left" port="port3" border="1" bgcolor="lightgray">nonce: 6278330124</td></tr>
+                    <tr><td align="left" port="port4" border="1">...</td></tr>
+                    <tr><td align="left" port="port5" border="1" bgcolor="lightgray">timestemp:  1590049607</td></tr>
+                    <tr><td align="left" port="port6" border="1">...</td></tr>
+                    <tr><td align="center" port="port1" border="0" color="white"></td></tr>
+                    <tr><td align="center" port="port1" border="0" color="white"><i>hash(data)=0x5a0c34..</i></td></tr>
+                </table>>
+    ]
+
+    "N" [label="...",shape=none]
+
+
+
+    node3
+    [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+                    <tr><td align="center" port="port1" border="0" color="white"><i>data</i></td></tr>
+                    <tr><td align="left" port="port2" border="1">...</td></tr>
+                    <tr><td align="left" port="port3" border="1" bgcolor="lightgray">nonce: 18393420921</td></tr>
+                    <tr><td align="left" port="port4" border="1">...</td></tr>
+                    <tr><td align="left" port="port5" border="1" bgcolor="lightgray">timestemp:  1590049607</td></tr>
+                    <tr><td align="left" port="port6" border="1">...</td></tr>
+                    <tr><td align="center" port="port1" border="0" color="white"></td></tr>
+                    <tr><td align="center" port="port1" border="0" bgcolor="red"><i>hash(data)=0x98bb23..</i></td></tr>
+                </table>>
+    ]
+
+
+    node1:port4->node2:port4 [style=invis];
+    node2:port4->N [style=invis];
+
+    N->node3:port4 [style=invis];
 
 
 }

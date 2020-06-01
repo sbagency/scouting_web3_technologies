@@ -32,7 +32,7 @@ Encrypted channel protocol can be constructed on _public key cryptography_ or _D
 === digital signatures
 Public key cryptography is a foundation for _digital signatures_. Digital signature can be constructed as encrypted by _secret key_ message hash, to _verify_ encrypted message hash is decrypted by _public key_ and compared with actual message hash, if result is equal signature is correct.
 
-image::images/digital-signatures.svg[float="left",align="center"]
+//image::images/digital-signatures.svg[float="left",align="center"]
 
 === brute force attack
 [%hardbreaks]

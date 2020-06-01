@@ -43,8 +43,12 @@ Search target output by changing (_increment_) some input fields repeatedly (_no
 
 image::images/brute-force-hashes.svg[float="right",align="center"]
 
-=== hash collision attacks
-Exploitation of _hash_ collisions to substitute data.
+=== hash collision attack
+Exploitation of _hash_ collisions to substitute different data for same hash by brute force attack.
+
+image::images/hash-collision-attack.svg[float="right",align="center"]
+
+
 
 
 

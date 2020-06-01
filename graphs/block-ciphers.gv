@@ -1,0 +1,42 @@
+digraph g {
+
+    rankdir=LR;
+
+subgraph cluster1 {
+    label = "plaint text";
+    graph [style=dashed,color=gray];
+
+
+    node1
+    [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+                    <tr>
+                        <td align="left" port="port1" border="1">0</td>
+                        <td align="left" port="port2" border="1">1</td>
+                        <td align="center" port="port3" border="1">...</td>
+                        <td align="left" port="port4" border="1">N-1</td>
+
+                        <td align="left" port="port1" border="0"></td>
+
+                        <td align="left" port="port1" border="1">0</td>
+                        <td align="left" port="port2" border="1">1</td>
+                        <td align="center" port="port3" border="1">...</td>
+                        <td align="left" port="port4" border="1">N-1</td>
+
+                        <td align="center" port="port1" border="0">...</td>
+
+
+                        <td align="left" port="port1" border="1">0</td>
+                        <td align="left" port="port2" border="1">1</td>
+                        <td align="center" port="port3" border="1">...</td>
+                        <td align="left" port="port4" border="1">N-1</td>
+
+                    </tr>
+                </table>>
+    ]
+
+}
+
+
+}

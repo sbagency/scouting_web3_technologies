@@ -1,0 +1,37 @@
+digraph digitalsignatures {
+
+rankdir=TB;
+node [shape=box]
+
+"sk" [label="secret key (sk)", style=dashed,color=red];
+
+"pk" [label="public key (pk)", style=dashed,color=red];
+
+"msg1" [label="data"];
+"sk"->"sign"
+"msg1"->"sign" [label="hash(data)"];
+
+"sign" [label="sign:encrypt(hash(data),sk)"];
+
+
+"sig1" [label="signature"];
+"sign"->"sig1"
+
+
+
+"sig2" [label="signature"];
+
+"msg2" [label="data"];
+
+"sig2"->"verify"
+"pk"->"verify"
+"msg2"->"verify" [label="hash(data)"];
+
+//"sk"->"pk"
+
+"verify" [label="verify:decrypt(signature,pk)==hash(data)"]
+
+"verify"->"ok" [label="?"];
+
+
+}

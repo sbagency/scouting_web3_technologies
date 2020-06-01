@@ -3,6 +3,9 @@
 
 _Public key cryptograhy_ is widely used to build _digital signatures_, simple protocol: _signature_ = encrypted data hash with _secret key_ (signature = encrypt( hash(data), _secret key_ )), verification is a decryption of _signature_ by _public key_ and comparison of hashes (hash(data) == decrypt( signature, _public key_ )).
 
+image::images/digital-signatures-2.svg[float="left",align="center"]
+
+
 Any _digital signatures_ protocol should implement two methods _sign_ and _verify_, _sign_ produces _signature_ a unique bitstring, _verify_ takes _signature_ and _public key_ to verify correctness and authenticity.
 
 === multisig
@@ -24,5 +27,10 @@ _Lamport signature_ and other methods are exist to construct _one time_ _digital
 image::images/lamport-signatures.svg[float="left",align="center"]
 
 There are some standards: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-208-draft.pdf[hash-based signature schemes], https://tools.ietf.org/html/rfc8391[xmss]
+
+=== aggregation signatures
+For distributed protocols multiple signatures of one data block are used very often, some aggregation signature schemes were designed (for instance BLS) to decrease metadata size, short signature authenticates all participants, but security concerns are there.
+
+
 
 

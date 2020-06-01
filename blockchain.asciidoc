@@ -7,7 +7,7 @@ One data includes _hash_ of one another, this inclusion is a link, if linked dat
 image::images/hash-link.svg[float="left",align="center"]
 
 === address
-Participants of _blockchain protocol_ are identified by _cryptographically_ constructed _addresses_. _Address_ is produced from random globally unique _public key_ of protocol participant (usually _blockchain_ _address_ = hash(_public key_) + some check and info data). Address is directly linked with participant's _public and private keys_. Every transaction in blockchain is signed, this signature associated with _public key_ and _address_ of signature maker. Technically address looks like unique byte string encoded in base64 format or hexadecimal.
+Participants of _blockchain protocol_ are identified by _cryptographically_ constructed unique _addresses_. _Address_ is produced from random globally unique _public key_ of protocol participant (usually _blockchain_ _address_ = hash(_public key_) + some check and info data). Address is directly linked with participant's _public and private keys_. Every transaction in blockchain is signed, this signature associated with _public key_ and _address_ of signature maker. Technically address looks like unique byte string encoded in base64 format or hexadecimal.
 
 === transaction
 [%hardbreaks]
@@ -47,4 +47,7 @@ In many _permissionless_ distributed _blockchain_ protocols nodes compete to eac
 In _permissined_ protocols there are no forks, blocks are produced by nodes in some order that's defined (no competition).
 
 image::images/blockchain.svg[float="left",align="center"]
+
+=== verifiability and traceability
+All transaction history is stored and can be verified, any _state transition_ is cryptographically traceable and verifiable.
 

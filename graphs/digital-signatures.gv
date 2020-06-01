@@ -20,9 +20,9 @@ node [shape=box]
 "sig2" -> "decryption"
 "pk" -> "decryption"
 
-"decryption" -> "verify"
-"d2" -> "verify" [label="hash(data)"]
+"decryption" -> "compare"
+"d2" -> "compare" [label="hash(data)"]
 
-"verify" -> "ok" [label="?"]
+"compare" -> "ok" [label="equal?"]
 
 }
