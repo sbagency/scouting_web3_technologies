@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<meta charset="UTF-8">
+<title>scouting web3 technologies</title>
+<style>
+
+
+html, body{
+  padding:0;
+  margin:0;
+  border: 0;
+  font-size:large;
+}
+
+
+.header {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    /* opacity: 0.5; */
+    font-size: 1em;
+}
+
+
+#light-sw{
+  float: right;
+  padding: 1.2em;
+  text-decoration: none;
+  color: lightgray;
+}
+
+.container{
+    display: flex;
+  
+    background-color: black;
+    color:green;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    min-height:100vh;
+
+}
+
+
+
+@media (max-width : 320px) {
+
+html, body{
+  font-size:small;
+}
+  
+}
+
+
+@media (min-width : 321px) and (max-width : 480px) {
+
+html, body{
+  font-size:large;
+}
+  
+}
+
+@media (min-width : 481px) and (max-width : 640px) {
+
+html, body{
+  font-size:x-large;
+}
+
+}
+
+@media (min-width : 641px) {
+
+html, body{
+  font-size:x-large;
+}
+
+  
+}
+
+
+</style>
+</head>
+  
+<body>
+<div class="header">
+<a id="light-sw" href="#">light</a>
+</div>
+
+<div class="container">
+  <h3><a href="https://github.com/web3scout/scouting_web3_technologies">scouting web3 technologies</a></h3>
+
+</div>
+
+<script>
+
+var bgcolors=["black","lightgray","white"];
+var bgindex=0;
+
+var el=document.querySelector("#light-sw");
+el.onclick=function(e){
+ var el=document.querySelector(".container");
+ e.target.style.color=bgcolors[bgindex];
+ bgindex=(bgindex+1)%bgcolors.length;
+ el.style.backgroundColor=bgcolors[bgindex];
+}
+
+
+
+
+</script>
+
+</body>
+  
+</html>
