@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<meta charset="UTF-8">
+<title>Data representation</title>
+<style>
+
+
+html, body{
+  padding:0;
+  margin:0;
+  border: 0;
+  font-size:x-large;
+}
+
+
+.header {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    /* opacity: 0.5; */
+    font-size: 1em;
+}
+
+
+#light-sw{
+  float: right;
+  padding: 1.2em;
+  text-decoration: none;
+  color: lightgray;
+}
+
+.container{
+    display: flex;
+  
+    background-color: black;
+    color:green;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    min-height:100vh;
+
+}
+
+
+.demoarea{
+ color:green;
+ background-color:inherit;
+ width:50vw;
+ border-color:darkgreen;
+ font-size:inherit;
+}
+
+@media (max-width : 320px) {
+.demoarea{
+ width:100vw;
+}
+
+html, body{
+  font-size:small;
+}
+  
+}
+
+
+@media (min-width : 321px) and (max-width : 480px) {
+.demoarea{
+ width:90vw;
+}
+
+html, body{
+  font-size:large;
+}
+  
+}
+
+@media (min-width : 481px) and (max-width : 640px) {
+.demoarea{
+ width:76vw;
+}
+
+html, body{
+  font-size:x-large;
+}
+
+}
+
+@media (min-width : 641px) {
+.demoarea{
+ width:50vw;
+}
+
+html, body{
+  font-size:x-large;
+}
+
+  
+}
+
+
+</style>
+</head>
+  
+<body>
+<div class="header">
+<a id="light-sw" href="#">light</a>
+</div>
+
+<div class="container">
+  <h3 style="text-align:center">data representation</h3>
+  
+  <div style="margin:0"><i>text input</i> (utf-8 encoded)</div>
+  <div>
+    <textarea id="plaintext" class="demoarea" rows=5>Hello world!</textarea>
+  </div>
+  <div style="margin:0"><i>bin</i></div>
+  <div>
+    <textarea id="data-bin" class="demoarea" rows=5></textarea>
+  </div>
+  <div style="margin:0"><i>hex</i></div>
+  <div>
+    <textarea id="data-hex" class="demoarea" rows=5></textarea>
+  </div>
+  <div style="margin:0 "><i>base64</i></div>
+  <div>
+    <textarea id="data-b64" class="demoarea" rows=5></textarea>
+  </div>
+  <h5>-------</h5>
+  <div style="margin:0"><i>struct input</i>(json)</div>
+  <div>
+    <textarea id="jsontext" class="demoarea" rows=5>{"name":"alice", "age":18, "timestamp":1590049607}</textarea>
+  </div>
+  <div style="margin:0"><i>bin hex (serialized,utf8)</i></div>
+  <div>
+    <textarea id="json-ser-hex" class="demoarea" rows=5></textarea>
+  </div>
+  <div style="margin:0 "><i>base64</i></div>
+  <div>
+    <textarea id="json-b64" class="demoarea" rows=5></textarea>
+  </div>
+  
+</div>
+
+<script>
+
+var bgcolors=["black","lightgray","white"];
+var bgindex=0;
+
+var el=document.querySelector("#light-sw");
+el.onclick=function(e){
+ var el=document.querySelector(".container");
+ e.target.style.color=bgcolors[bgindex];
+ bgindex=(bgindex+1)%bgcolors.length;
+ el.style.backgroundColor=bgcolors[bgindex];
+}
+
+
+function arr20b(d){
+  if(d.length==0)return "";
+  var x=d[0].toString(2).padStart(8, '0');
+  for(var i=1;i<d.length;i++){
+    x=x+'_'+d[i].toString(2).padStart(8, '0');
+  }
+  return x
+}
+
+function arr20x(d){
+  var x="";
+  for(var i=0;i<d.length;i++){
+    x=x+d[i].toString(16).padStart(2, '0');
+  }
+  return x
+}
+
+
+function bufferToBase64(buffer) {
+     const binary = String.fromCharCode.apply(null, buffer);
+     return window.btoa(binary);
+}
+
+var data_bin_El=document.querySelector("#data-bin");
+var data_hex_El=document.querySelector("#data-hex");
+var data_b64_El=document.querySelector("#data-b64");
+
+var plaintextEl=document.querySelector("#plaintext");
+
+plaintextEl.oninput=async function(){
+  const data = (new TextEncoder('utf-8')).encode(plaintextEl.value);
+  data_bin_El.value=arr20b(data);
+  data_hex_El.value=arr20x(data);
+  data_b64_El.value=data_b64_El.innerText=bufferToBase64(data);
+}
+
+plaintextEl.oninput();
+
+
+const welcomeString="Welcome to the wonderland!";
+var tick1=0;
+
+var timer1=setInterval(function(){
+  if(tick1==0){plaintextEl.value="";}
+  if(tick1<welcomeString.length){
+    plaintextEl.value+=welcomeString[tick1];
+    plaintextEl.oninput();
+    tick1++;
+  } else{
+    console.log("booome!!!");
+    clearInterval(timer1);
+  }
+  
+},300)
+
+
+
+const jsonData = {
+  name:"Alice",
+  age:18,
+  timestamp:1590049607,
+  
+}
+const jsontextEl=document.querySelector("#jsontext");
+const json_hex_El=document.querySelector("#json-ser-hex");
+const json_b64_El=document.querySelector("#json-b64");
+
+jsontextEl.oninput=async function(){
+  try{
+  const json_data = JSON.parse(jsontextEl.value);
+  const data = (new TextEncoder('utf-8')).encode(JSON.stringify(json_data));
+  
+  json_hex_El.value=arr20x(data);
+  json_b64_El.value=bufferToBase64(data);
+  
+  }
+  catch(e){json_hex_El.value="error"};
+  
+}
+
+jsontextEl.oninput();
+
+
+</script>
+
+</body>
+  
+</html>
