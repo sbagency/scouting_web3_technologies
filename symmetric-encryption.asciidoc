@@ -23,16 +23,16 @@ It's an alias to input, _plain_ means _unencrypted_.
 KDF generates new encryption key based on input key and optionally some random parameters (KDF is constructed on _cryptographic hash functions_). One _master secret key_ generates many other _secret keys_ or just longer _encryption key_.
 
 === xor encryption
-Basic form of _symmetric encryption_ is constructed on _bitwise xor_ operation (_encrypted_data_ = _plain text_ xor _key_), to perfection _key_ must be absolutely random, unique and size of _key_ must be not less than size of _plai_text_.
+Basic form of _symmetric encryption_ is constructed on _bitwise xor_ operation (_encrypted_data_ = _plain text_ xor _key_), to perfection _key_ must be absolutely random, unique and size of _key_ must be not less than size of _plain_text_.
 
 
 === bitmix encryption
-More complex _symmetric_encryption_ algoritms are based on _bitmixers_ of input data and _key_.
-Currently advanced encryption standart (AES) is widely used. AES is supported in Intel microprocessors on hardware level.
+More complex _symmetric_encryption_ algorithms are based on _bitmixers_ of input data and _key_.
+Currently advanced encryption standard (AES) is widely used. AES is supported in Intel microprocessors on hardware level.
 The problem is modern encryption standards (AES) are block ciphers, there is an encryption of fixed size blocks.
 
 === encryption keys
-Uniqness and randomness of keys are very important. There are many approaches how to generate keys more or less secure. Many vulnerabilities are reasons of bad key generation and management.
+Uniqueness and randomness of keys are very important. There are many approaches how to generate keys more or less secure. Many vulnerabilities are reasons of bad key generation and management.
 
 
 === brute force attack

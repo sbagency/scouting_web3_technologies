@@ -1,7 +1,23 @@
 digraph blockchain {
 rankdir=RL;
 
-node [fontname=Monospace,fontsize=12]
+node [shape=circle]
+
+edge [color=gray,style=dashed]
+
+"t0" [label="tx"];
+"t1" [label="tx"];
+"t2" [label="tx"];
+"t3" [label="tx"];
+"t4" [label="tx"];
+"t5" [label="tx"];
+"t6" [label="tx"];
+"t7" [label="tx"];
+"t8" [label="tx"];
+"t9" [label="tx"];
+"t10" [label="tx"];
+
+
 
 "t1" -> "t0"
 

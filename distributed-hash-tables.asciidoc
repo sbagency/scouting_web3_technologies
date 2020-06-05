@@ -10,7 +10,7 @@ It's very low probability of collision because of enough number of bytes (situat
 
 
 === key-value data storage
-It's a data storage with data (value) access (read/write) by key, key-value data storage is build on _hash tables_, _trees_ and other types of indexes. _Hash tables_ give fast acesses, _trees_ give possibility to iterate over ordered keys.
+It's a data storage with data (value) access (read/write) by key, key-value data storage is build on _hash tables_, _trees_ and other types of indexes. _Hash tables_ give fast accesses, _trees_ give possibility to iterate over ordered keys.
 
 === hash table
 It's a data structure where keys are mapped by algorithm based on *_hash function_* to data (value) location (in memory).
@@ -29,7 +29,7 @@ When each node handles info about all other nodes in network it's a best case fo
 
 image::images/dht.svg[float="left",align="center"]
 
-Also some data loss prevention meachnism is needed, data can be replicated to many nodes for instance or redundantely encoded and stored on many nodes (_reed-solomon_ encoding, etc.).
+Also some data loss prevention mechanism is needed, data can be replicated to many nodes for instance or redundantly encoded and stored on many nodes (_reed-solomon_ encoding, etc.).
 
 
 Key (address) can be generated as unique identifier or computed as *_hash_* of data, usage of unique identifier is location addressing, *_hash_* is content addressing.
@@ -39,7 +39,7 @@ Key (address) can be generated as unique identifier or computed as *_hash_* of d
 To protect distributed protocols from different kind of attacks *_digital signatures_* and other mechanisms are mandatory to use.
 
 === distributed ledger technology (DLT)
-It's a technology of cryptograhically and algorithmically protected database (_ledger_) replicated across many nodes (_same ledger copy on each node_).
+It's a technology of cryptographically and algorithmically protected database (_ledger_) replicated across many nodes (_same ledger copy on each node_).
 
 === protected data storage protocol
-You can build your own *_DHT_* protocol optimised for speed and protected by advanced security features. *_DHT_* + *_DLT_* is a good combination (DHT for data, DLT for security(key management, metadata)), have a look at https://filecoin.io/[filecoin], https://sia.tech/[sia] and similar projects.
+You can build your own *_DHT_* protocol optimized for speed and protected by advanced security features. *_DHT_* + *_DLT_* is a good combination (DHT for data, DLT for security(key management, metadata)), have a look at https://filecoin.io/[filecoin], https://sia.tech/[sia] and similar projects.

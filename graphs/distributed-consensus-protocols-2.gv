@@ -1,0 +1,39 @@
+digraph dcp {
+
+graph [layout = "circo"]
+
+edge [arrowhead="none"]
+
+node [shape=circle]
+
+
+edge [color=gray,style=dashed]
+
+
+n0 [label="A"]
+n1 [label="B", style=filled, fillcolor="red"]
+n2 [label="C", style=filled, fillcolor="red"]
+n3 [label="D"]
+n4 [label="E"]
+
+
+node [shape=circle,style=filled, fillcolor="lightgray"]
+
+i0 [label="SP"]
+i1 [label="SP"]
+i2 [label="SP"]
+
+
+i0 -> i1
+i0 -> i2
+i1 -> i2
+
+
+n0 -> i0
+n1 -> i0
+n2 -> i1
+n3 -> i2
+n4 -> i1
+
+
+}

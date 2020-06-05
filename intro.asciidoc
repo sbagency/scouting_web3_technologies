@@ -6,10 +6,13 @@
 _New/old_ *technologies* for the _new/old_ web:
 
 === web3 == verifiable web
-*_Web3_* is a long time disputed term (as happend, not a _semantic web_ as started), for today it's the web that's based on cryptographical *_verifiability_* and *_traceability_*. One of the first _verifiable web3_ projects is *_bitcoin_*, all transaction history is _traceable_ and _verifiable_ by everyone. Web3 isn't only _cryptocurrency or blockchain_ it's about _verifiability_ and _traceability_ (thanks to _crypography_ and _digital signatures_) and long term research, last trends are _self sovereign identity_ (SSI) management (based on _decentralized identifiers_,_verifiable credentials_), blockchain adoption by government central banks, etc.
+*_Web3_* is a long time disputed term (as happened, not a _semantic web_ as started), for today it's the web that's based on cryptographical *_verifiability_* and *_traceability_*. One of the first _verifiable web3_ projects is *_bitcoin_*, all transaction history is _traceable_ and _verifiable_ by everyone. Web3 isn't only _cryptocurrency or blockchain_ it's about _verifiability_ and _traceability_ (thanks to _cryptography_ and _digital signatures_) and long term research, last trends are _self sovereign identity_ (SSI) management (based on _decentralized identifiers_,_verifiable credentials_), blockchain adoption by government central banks, etc.
 
 === cryptography
 Science of data and computation protection that are mostly based on _computation complexity_ (that's bad 'cause of computing progress and especially quantum tech).
+
+=== data representation
+So many forms of data representation exist, but any data can be serialized as byte array suitable for cryptographic protocols, it's necessary to compute data hash, digitally sign data, send data over network, represent data as big number, etc.
 
 === one-way function
 Easy to compute function to get output but almost impossible reverse operation find input by output (_computationally complex_).
@@ -17,7 +20,7 @@ Easy to compute function to get output but almost impossible reverse operation f
 === hash function
 Takes any size input produces fixed size output, widely used for data _verification_ and _indexing_ in algorithms, protocols and data storage.
 
-=== cryptographical hash function
+=== cryptographic hash function
 It's _one-way_ _hash_ function (any size input, _fixed_ size output, almost impossible find input by output).
 
 === hash table
@@ -33,32 +36,32 @@ It's used for nodes search in _scalable_ distributed network for data access (sc
 For data encryption and decryption by _one key_.
 
 === asymmetric encryption
-For data encryption by _one key_ and decryption by _another key_, this key pair are algoritmically linked.
+For data encryption by _one key_ and decryption by _another key_, this key pair are algorithmically linked.
 
 === public key cryptography
 It's an _asymmetric encryption_ when one key is _public_ another is _private_, in most cases data (message) is encrypted by _public key_, decrypted by _private_ key (_public key_ derived from randomly generated globally unique _private key_).
 
 === digital signature
-It's  widely used for data authenticity and integrity verification (usually constructed on _cryptographical hash functions_ and _public key cryptography_, only _private key_ owner is able to produce _digital signature_ which is _verifiable_ by everyone who knows _public key_).
+It's  widely used for data authenticity and integrity verification (usually constructed on _cryptographic hash functions_ and _public key cryptography_, only _private key_ owner is able to produce _digital signature_ which is _verifiable_ by everyone who knows _public key_).
 
 === post quantum
 Protocol or algorithm is _post quantum_ if it can't be hacked by future _quantum computers_ (_in theory_).
 
 === hash links
-Data hash is a _link_ to this data or data identifier, if data is changed old link is invalid, this usefull for data consistency _verification_ (or data immutability _verification_, that's constructed as chain of _hash links_ (_blockchain_)).
+Data hash is a _link_ to this data or data identifier, if data is changed old link is invalid, this useful for data consistency _verification_ (or data immutability _verification_, that's constructed as chain of _hash links_ (_blockchain_)).
 
 === verifiable message or data
-Message or data _verifiabilty_ is based on _hashes_, _hash links_,_digital signatures_ and other _protocol_ specific conditions and rules.
+Message or data _verifiability_ is based on _hashes_, _hash links_,_digital signatures_ and other _protocol_ specific conditions and rules.
 
 
 === blockchain
-It's a _state transition_ _verification_ and _traceability_ technology mainly used in _distributed ledger protocols_ (chain of transactions blocks with _hash links_ in each block to previous one, data block in chain can't be changed _untraceably_).
+It's a _state transition_ _verification_ and _traceability_ technology mainly used in _distributed ledger protocols_ (chain of transactions blocks with _hash links_ in each block to previous one, data block in chain can't be changed _untraceable_).
 
 === direct acyclic graph (DAG)
-Same as _blockchain_ but instead of chain of transactions blocks _direct acyclic graph_ of blocks or single trabsactions is used, DAG nodes are linked by _hashes_, each node includes _hash links_ to two predecessor nodes, as main feature nodes can be automatically ordered.
+Same as _blockchain_ but instead of chain of transactions blocks _direct acyclic graph_ of blocks or single transactions is used, DAG nodes are linked by _hashes_, each node includes _hash links_ to two predecessor nodes, as main feature nodes can be automatically ordered.
 
 === distributed protocol
-It's a protocol for _distributed network_ of nodes with some goals and rules, all participants exchange _digitally signed_ _verifiable_ messages to achieve network goals (_state transition consensus_, _payment channel_ maintainance, _transaction_ broadcast, configuration update, etc. ).
+It's a protocol for _distributed network_ of nodes with some goals and rules, all participants exchange _digitally signed_ _verifiable_ messages to achieve network goals (_state transition consensus_, _payment channel_ maintenance, _transaction_ broadcast, configuration update, etc. ).
 
 === distributed consensus protocol
 It's a _distributed protocol_ to reach _consensus_ of some state transition or something else in _distributed network_ of nodes without _trust_ to each other. _Consensus protocols_ must be fault tolerant and prevent _malicious_ attacks (of course if majority of nodes _malicious_ it's almost impossible to handle it (51% attack)).
@@ -66,8 +69,8 @@ It's a _distributed protocol_ to reach _consensus_ of some state transition or s
 === byzantine fault tolerance (BFT)
 It's a tolerance of _distributed network_ (_protocol_) to attacks from _malicious_ participants (internal nodes), historically this problem is known as _byzantine generals problem_.
 
-=== multi-pary computation (MPC)
-It's two or more parties computation protocols with some security requirenments (to keep computation inputs secret for example or prevent some other types of attacks).
+=== multi-party computation (MPC)
+It's two or more parties computation protocols with some security requirements (to keep computation inputs secret for example or prevent some other types of attacks).
 
 === permissionless protocol
 Anyone can join distributed network with _permissionless protocol_ without any explicit permission (_bitcoin_ protocol is an example).

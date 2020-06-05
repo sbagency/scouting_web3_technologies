@@ -5,7 +5,7 @@ It's an _encryption_ with one _key_ and _decryption_ with another _key_. One _ke
 
 image::images/asymmetric-encryption.svg[float="left",align="center"]
 
-=== secrert key generation
+=== secret key generation
 Secret key is a just random bytes, true randomness is mandatory. To keep _secret key_ secret it's stored _symmetrically_ encrypted.
 
 === public key cryptography
@@ -17,7 +17,7 @@ Trusted 3d party is required to provide _certificates_ for _public keys_.
 _RSA_ (_Rivest–Shamir–Adleman_) one of the first public key cryptography protocols is still widely used.
 
 === public key certificate
-Digital documet with public key and other meta signed by trusted 3d party key.
+Digital document with public key and other meta signed by trusted 3d party key.
 
 === public key infrastructure (PKI)
 Trusted 3d parties provide validity proofs (_certificates_) for users _public keys_.

@@ -12,7 +12,7 @@ Participants of _blockchain protocol_ are identified by _cryptographically_ cons
 === transaction
 [%hardbreaks]
 It's an _instructions + data_ how to change a _state_ (_state transition_). Transaction has a _digital signatures_ of one or multiple _senders_, this signatures are _verified_ when transaction received. Transaction may fail at the process of execution (all changes rollback). Transactions manipulate state of a ledger, for instance transfer balance from one address to another.
-For financial transactions there are two models of state maintenance: _unspent transaction outputs_ and _account/balance_ records. Technically _transaction_ is a binary record with some fields and digital signatire(s) of this fields.
+For financial transactions there are two models of state maintenance: _unspent transaction outputs_ and _account/balance_ records. Technically _transaction_ is a binary record with some fields and digital signature(s) of this fields.
 
 
 Transaction logic can be uploaded to _distributed ledger_ and used dynamically at runtime in a form of _smartcontracts_ or external applications or _hardcoded_ in core _ledger protocol_. Some limited scripts also can be embedded in transaction body to extend protocol functionality.
@@ -31,7 +31,7 @@ It's a _verifiable_, _traceable_ _state transition_ protocol, state transition i
 image::images/state-transition-tx.svg[float="left",align="center"]
 
 === distributed blockchain protocol
-It's a _blockchain protocol_ for _distributed network_ of nodes, usually same copy of state is stored in a distributed ledger database. Distributed consensus protocol is used to achive consensus of state transitions among nodes.
+It's a _blockchain protocol_ for _distributed network_ of nodes, usually same copy of state is stored in a distributed ledger database. Distributed consensus protocol is used to achieve consensus of state transitions among nodes.
 
 === unspent transaction output (UTXO)
 State transition of money balances in a ledger can be represented as direct graph of transactions, each transaction (graph node) has an inputs and outputs of money spendings, any address balance that's available for spending is a sum of unspent outputs (can be spend by address digital signature).

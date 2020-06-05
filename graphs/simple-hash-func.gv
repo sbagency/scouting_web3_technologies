@@ -1,0 +1,35 @@
+digraph simplehashfunc {
+
+//rankdir=LR;
+node [shape=box]
+
+subgraph cluster1 {
+  label = "data";
+  graph [style=dashed,color=gray];
+
+
+"d0" [label="d0"]
+"d1" [label="d1"]
+"d2" [label="...", shape=none]
+"dn-1" [label="dn-1"]
+
+{rank="same" "d0" "d1" "d2" "dn-1"};
+
+}
+
+"d0"->"d1"->"d2"->"dn-1" [style=invis]
+
+
+
+"sum" [label="+",shape=circle, color=red, style=dashed]
+
+"d0"->"sum"
+"d1"->"sum"
+"dn-1"->"sum"
+
+"sum"->"hash"
+
+
+
+
+}

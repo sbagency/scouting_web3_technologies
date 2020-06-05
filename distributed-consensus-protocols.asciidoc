@@ -1,7 +1,14 @@
 == distributed consensus protocols
-It's simply consensus on _state transition_ in distributed network without trust among participants and users (transactions senders). State transition is processed by ordered list of _transactions_, _transactions_ can be grouped by blocks (for traffic optimisation).
+It's consensus on _state transition_ in distributed network without trust among participants and users (transactions senders). State transition is processed by ordered list of _transactions_, _transactions_ can be grouped by blocks (for traffic and processing optimisation).
 
-Technically to achieve consensus on _state transition_ each node should send _digitally signed_ messages with some information of _state transition_ to other nodes. To reduce number of messages one coordinator (_block producer_) node is selected each time (by some algorithm).
+Technically to achieve consensus on _state transition_ each node should send _digitally signed_ messages with some information of _state transition_ to other nodes.
+
+image::images/distributed-consensus-protocols.svg[float="left",align="center"]
+
+Real world connection
+
+image::images/distributed-consensus-protocols-2.svg[float="left",align="center"]
+
 
 === byzantine fault tolerance (BFT)
 Tolerance to malicious minority of participants, formalized as byzantine generals problem.
@@ -10,10 +17,10 @@ Tolerance to malicious minority of participants, formalized as byzantine general
 It's a _block producer_ selection mechanism. Proof of that computationally hard problem is solved (_POW_) is used to select a _block producer_ node who provides state transition for one block, for another block - another block producer is selected.
 
 === proof of stake (POS)
-Same as _POW_ but different selection mechanism among nodes with staked balance is used, bigger stake - bigger chanses to be selected.
+Same as _POW_ but different selection mechanism among nodes with staked balance is used, bigger stake - bigger chances to be selected.
 
 If internal economy exists block producers are incentivized by reward.
 
 === scalability trilemma
-A term coined by Vitalik Buterin for 3 things: _scalability_, _security_, _decentralization_ you can't achive all three at the same time.
+A term coined by Vitalik Buterin for 3 things: _scalability_, _security_, _decentralization_ you can't achieve all three at the same time.
 

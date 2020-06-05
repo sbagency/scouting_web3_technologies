@@ -1,13 +1,48 @@
 digraph hashfunc {
 
 rankdir=LR;
-
+/*
 
 "X" [style=dashed,color=red,shape=circle];
 "Y" [style=dashed,color=red,shape=circle];
 
 
 "X"->"Y" [label="hash(X)"];
+*/
+
+
+
+    node1
+    [
+        shape = none
+        label = <<table border="1" cellspacing="1" color="gray">
+                    <tr>
+                    <td align="left" port="port1" border="0" bgcolor="green">  </td>
+                    <td align="left" port="port2" border="0" bgcolor="blue">  </td>
+                    <td align="left" port="port3" border="0" bgcolor="lightgreen">  </td>
+                    <td align="center" port="port4" border="0" bgcolor="white">..</td>
+                    <td align="left" port="port5" border="0" bgcolor="grey">  </td>
+                    </tr>
+                </table>>
+    ]
+
+
+
+    node2
+    [
+        shape = none
+        label = <<table border="1" cellspacing="1" color="gray">
+                    <tr>
+                    <td align="left" port="port1" border="0" bgcolor="lightgray">  </td>
+                    <td align="left" port="port2" border="0" bgcolor="lightgreen">  </td>
+                    <td align="center" port="port3" border="0" bgcolor="brown">  </td>
+                    <td align="left" port="port4" border="0" bgcolor="magenta">  </td>
+                    </tr>
+                </table>>
+    ]
+
+
+  node1:port5->node2:port1 [label="hash()",color="gray"];
 
 
 }

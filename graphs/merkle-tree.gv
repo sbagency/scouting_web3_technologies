@@ -1,29 +1,50 @@
 digraph hierarchy {
-node [fontname=Monospace,fontsize=12,shape=box]
+
+node [shape=box]
 edge [dir = back]
-"H10" [style=dashed,color=red];
-"H10" -> "H8"
-"H10" -> "H9" [style=dashed,color=red];
-"H8" -> "H5"
-"H9" -> "H6" [style=dashed,color=red];
-"H9" [style=dashed,color=red];
-"H9" -> "H7"
-"H5" -> "H0"
-"H5" -> "H1"
-"H6" -> "H2"
-"H6" -> "H3" [style=dashed,color=red];
-"H6" [style=dashed,color=red];
-"H7" -> "H4"
-"H0" -> "D0"
-"H1" -> "D1"
-"H2" -> "D2"
-"H3" -> "D3"
-"H3" [style=dashed,color=red];
-"H4" -> "D4"
-"D0" [style=filled];
-"D1" [style=filled];
-"D2" [style=filled];
-"D3" [style=filled];
-"D4" [style=filled];
+
+"h10" [label="h10=hash(h8,h9)",style=dashed,color=red];
+
+"h10" -> "h8"
+"h10" -> "h9" [style=dashed,color=red];
+"h8" -> "h5"
+
+"h8" [label="h8=hash(h5)"]
+"h9" [label="h9=hash(h6,h7)",style=dashed,color=red];
+
+"h9" -> "h6" [style=dashed,color=red];
+
+"h9" -> "h7"
+"h5" -> "h0"
+"h5" -> "h1"
+
+"h5" [label="h5=hash(h0,h1)"];
+
+"h6" -> "h2"
+"h6" -> "h3" [style=dashed,color=red];
+
+"h6" [label="h6=hash(h2,h3)",style=dashed,color=red];
+"h7" [label="h7=hash(h4)"];
+
+"h7" -> "h4"
+
+"h0" -> "d0"
+"h1" -> "d1"
+"h2" -> "d2"
+"h3" -> "d3"
+"h3" [style=dashed,color=red];
+"h4" -> "d4"
+
+"h0" [label="h0=hash(d0)"];
+"h1" [label="h1=hash(d1)"];
+"h2" [label="h2=hash(d2)"];
+"h3" [label="h3=hash(d3)"];
+"h4" [label="h4=hash(d4)"];
+
+"d0" [style=filled];
+"d1" [style=filled];
+"d2" [style=filled];
+"d3" [style=filled];
+"d4" [style=filled];
 
 }

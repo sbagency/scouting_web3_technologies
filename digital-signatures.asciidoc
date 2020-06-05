@@ -1,23 +1,23 @@
 == digital signatures
 [%hardbreaks]
 
-_Public key cryptograhy_ is widely used to build _digital signatures_, simple protocol: _signature_ = encrypted data hash with _secret key_ (signature = encrypt( hash(data), _secret key_ )), verification is a decryption of _signature_ by _public key_ and comparison of hashes (hash(data) == decrypt( signature, _public key_ )).
+_Public key cryptography_ is widely used to build _digital signatures_, simple protocol: _signature_ = encrypted data hash with _secret key_ (signature = encrypt( hash(data), _secret key_ )), verification is a decryption of _signature_ by _public key_ and comparison of hashes (hash(data) == decrypt( signature, _public key_ )).
 
 image::images/digital-signatures-2.svg[float="left",align="center"]
 
 
-Any _digital signatures_ protocol should implement two methods _sign_ and _verify_, _sign_ produces _signature_ a unique bitstring, _verify_ takes _signature_ and _public key_ to verify correctness and authenticity.
+Any _digital signatures_ protocol should implement two methods _sign_ and _verify_, _sign_ produces _signature_ a unique bitstring (encrypted by _secret key_ data hash), _verify_ takes _signature_, _public key_ and data hash to verify correctness and authenticity (compare decrypted hash with actual hash).
 
 === multisig
 It's construction when multiple keys (parties) are used to _sign_ data that usually required in distributed protocols.
 
 === ring signatures
-It's used for privacy preserving. Signature can be produced by any member of a group without revealing who exactly. Verifier can only verify that signature is correct and one of the group memders created this signature.
+It's used for privacy preserving. Signature can be produced by any member of a group without revealing who exactly. Verifier can only verify that signature is correct and one of the group members created this signature.
 
 === one time signatures
-The idea is simple to use pair (_secret_,_public_) key to sign message/data only once.
+The idea is simple to use pair (_secret_,_public_) key to sign one message/data only once.
 
-To construct _one time signatures_ many _secret keys_ are generated and _public keys_ _merkle tree_ are built for verification, each _secret key_ is used only once. Any well known algorithm to _sign_ and _verify_ can be used + _merkle tree_ for test. This is a bit over redundant but almost impossible to fake your signature. It's scalable by generating new array of _secret keys_ and _merkel tree_ linked to previous one.
+To construct _one time signatures_ many _secret keys_ are generated and _public keys_ _merkle tree_ are built for verification, each _secret key_ is used only once. Any well known algorithm to _sign_ and _verify_ can be used + _merkle tree_ for verification. This is a bit over redundant but almost impossible to fake your signature 'cause key pair is used only once. It's scalable by generating new array of _secret keys_ and _merkel tree_ signed by one key from previous batch.
 
 image::images/one-time-signatures.svg[float="left",align="center"]
 

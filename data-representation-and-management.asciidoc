@@ -1,0 +1,67 @@
+== data representation and management
+
+=== string (utf-8)
+_Hello world!_
+
+=== binary encoding
+01001000_01100101_01101100_01101100_01101111_00100000_01110111_01101111_01110010_01101100_01100100_00100001
+
+=== hex encoding
+48656c6c6f20776f726c6421
+
+=== decimal (bigint) encoding
+22405534230753963835153736737
+
+=== base64 encoding
+SGVsbG8gd29ybGQh
+
+
+=== structed data
+[source,js]
+----
+const data = {
+  "name":"Alice",
+  "age":18,
+  "timestamp":1222361246237124,
+  "comment":"Please contact by email.",
+  "nonce":12312312322
+}
+
+console.log(JSON.stringify(data))
+// {"name":"Alice","age":18,"timestamp":1222361246237124,"comment":"Please contact by email.","nonce":12312312322}
+
+const dataArray = (new TextEncoder()).encode(JSON.stringify(data))
+
+console.log(dataArray)
+// Uint8Array(111) [
+  123,  34, 110,  97, 109, 101,  34,  58,  34,  65, 108, 105,
+   99, 101,  34,  44,  34,  97, 103, 101,  34,  58,  49,  56,
+   44,  34, 116, 105, 109, 101, 115, 116,  97, 109, 112,  34,
+   58,  49,  50,  50,  50,  51,  54,  49,  50,  52,  54,  50,
+   51,  55,  49,  50,  52,  44,  34,  99, 111, 109, 109, 101,
+  110, 116,  34,  58,  34,  80, 108, 101,  97, 115, 101,  32,
+   99, 111, 110, 116,  97,  99, 116,  32,  98, 121,  32, 101,
+  109,  97, 105, 108,  46,  34,  44,  34, 110, 111, 110,  99,
+  101,  34,  58,  49,
+  ... 11 more items
+]
+
+function toHexStr(d){
+  var x="";
+  for(var i=0;i<d.length;i++){
+    x=x+d[i].toString(16).padStart(2, '0');
+  }
+  return x
+}
+
+const hexStr=toHexStr(dataArray)
+console.log(hexStr)
+// 7b226e616d65223a22416c696365222c22616765223a31382c2274696d657374616d70223a313232323336313234363233373132342c22636f6d6d656e74223a22506c6561736520636f6e7461637420627920656d61696c2e222c226e6f6e6365223a31323331323331323332327d
+
+console.log(BigInt('0x'+hexStr).toString())
+// 992603778683518408531146001307291499896139746483120112208709800824241099318904212063177837105292910794382967417376227684576615385061879989377232397127368422611376948042418826811832055337244047851942683490761822818640712722715544798060140156127576651757070721500721789
+
+console.log(Buffer.from(dataArray).toString('base64'))
+// eyJuYW1lIjoiQWxpY2UiLCJhZ2UiOjE4LCJ0aW1lc3RhbXAiOjEyMjIzNjEyNDYyMzcxMjQsImNvbW1lbnQiOiJQbGVhc2UgY29udGFjdCBieSBlbWFpbC4iLCJub25jZSI6MTIzMTIzMTIzMjJ9
+----
+
