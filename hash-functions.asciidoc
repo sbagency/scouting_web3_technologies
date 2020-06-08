@@ -4,10 +4,11 @@
 === hash function
 Takes any size input, produces fixed size output.
 
+image::images/hash-func.svg[float="right",align="center"]
+
 === cryptographic hash function
 It's a *_hash function_* for which extremely hard (practically impossible) to find input by output or  _one-way_ function with fixed size output.
 
-image::images/hash-func.svg[float="right",align="center"]
 
 === collision
 It's a situation when *_hash function_* produces same output for two different inputs.
@@ -52,6 +53,22 @@ image::images/hash-collision-attack.svg[float="right",align="center"]
 
 
 
-
-
+=== asic resistance hashing
+Data dependency hashing (random dependency) is being built on switch-case construction. Hash is computed as a sequence of random (data dependency) hashes.
+[source,c++]
+----
+// pseudo code
+h=0;
+for(int i=0;i<l;i++){
+d=data[i];
+switch(d){
+case 0: h=hash0(h,d)
+case 1: h=hash1(h,d)
+case 2: h=hash2(h,d)
+...
+case N: h=hashN(h,d)
+}
+}
+----
+16 different hash functions [X16R](https://en.bitcoinwiki.org/wiki/X16R)
 

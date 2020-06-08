@@ -2,132 +2,90 @@
 [[intro_chapter]]
 == intro
 [%hardbreaks]
-
 _New/old_ *technologies* for the _new/old_ web:
 
-=== web3 == verifiable web
-*_Web3_* is a long time disputed term (as happened, not a _semantic web_ as started), for today it's the web that's based on cryptographical *_verifiability_* and *_traceability_*. One of the first _verifiable web3_ projects is *_bitcoin_*, all transaction history is _traceable_ and _verifiable_ by everyone. Web3 isn't only _cryptocurrency or blockchain_ it's about _verifiability_ and _traceability_ (thanks to _cryptography_ and _digital signatures_) and long term research, last trends are _self sovereign identity_ (SSI) management (based on _decentralized identifiers_,_verifiable credentials_), blockchain adoption by government central banks, etc.
+* web3 == verifiable web, *_web3_* is a long time disputed term (as happened, not a _semantic web_ as started), for today it's the web that's based on cryptographical *_verifiability_* and *_traceability_*. One of the first _verifiable web3_ projects is *_bitcoin_*, all transaction history is _traceable_ and _verifiable_ by everyone. Web3 isn't only _cryptocurrency or blockchain_ it's about _verifiability_ and _traceability_ (thanks to _cryptography_ and _digital signatures_) and long term research, last trends are _self sovereign identity_ (SSI) management (based on _decentralized identifiers_,_verifiable credentials_), blockchain adoption by government central banks, etc.
 
-=== cryptography
-Science of data and computation protection that are mostly based on _computation complexity_ (that's bad 'cause of computing progress and especially quantum tech).
+* cryptography, science of data and computation protection that are mostly based on _computation complexity_ (that's bad 'cause of computing progress and especially quantum tech).
 
-=== data representation
-So many forms of data representation exist, but any data can be serialized as byte array suitable for cryptographic protocols, it's necessary to compute data hash, digitally sign data, send data over network, represent data as big number, etc.
+* data representation, so many forms of data representation exist, but any data can be serialized as byte array suitable for cryptographic protocols, it's necessary to compute data hash, digitally sign data, send data over network, represent data as big number, etc.
 
-=== one-way function
-Easy to compute function to get output but almost impossible reverse operation find input by output (_computationally complex_).
+* one-way function, easy to compute function to get output but almost impossible reverse operation find input by output (_computationally complex_).
 
-=== hash function
-Takes any size input produces fixed size output, widely used for data _verification_ and _indexing_ in algorithms, protocols and data storage.
+* hash function, takes any size input produces fixed size output, widely used for data _verification_ and _indexing_ in algorithms, protocols and data storage.
 
-=== cryptographic hash function
-It's _one-way_ _hash_ function (any size input, _fixed_ size output, almost impossible find input by output).
+* cryptographic hash function, it's _one-way_ _hash_ function (any size input, _fixed_ size output, almost impossible find input by output).
 
-=== hash table
-It's used as a quick data index (based on _hash function_), constant overage search time (_if no hash collisions_).
+* hash table,it's used as a quick data index (based on _hash function_), constant overage search time (_if no hash collisions_).
 
-=== merkle tree (hash tree)
-It's used for separate and combined data blocks _verification_, in some protocols _merkle path_ is used (path in a _merkle tree_ from bottom block hash to _merkle root_ hash).
+* merkle tree (hash tree), it's used for separate and combined data blocks _verification_, in some protocols _merkle path_ is used (path in a _merkle tree_ from bottom block hash to _merkle root_ hash).
 
-=== distributed hash table (DHT)
-It's used for nodes search in _scalable_ distributed network for data access (scalable data storage).
+* distributed hash table (DHT), it's used for nodes search in _scalable_ distributed network for data access (scalable data storage).
 
-=== symmetric encryption
-For data encryption and decryption by _one key_.
+* symmetric encryption, for data encryption and decryption by _one key_.
 
-=== asymmetric encryption
-For data encryption by _one key_ and decryption by _another key_, this key pair are algorithmically linked.
+* asymmetric encryption, for data encryption by _one key_ and decryption by _another key_, this key pair are algorithmically linked.
 
-=== public key cryptography
-It's an _asymmetric encryption_ when one key is _public_ another is _private_, in most cases data (message) is encrypted by _public key_, decrypted by _private_ key (_public key_ derived from randomly generated globally unique _private key_).
+* public key cryptography, it's an _asymmetric encryption_ when one key is _public_ another is _private_, in most cases data (message) is encrypted by _public key_, decrypted by _private_ key (_public key_ derived from randomly generated globally unique _private key_).
 
-=== digital signature
-It's  widely used for data authenticity and integrity verification (usually constructed on _cryptographic hash functions_ and _public key cryptography_, only _private key_ owner is able to produce _digital signature_ which is _verifiable_ by everyone who knows _public key_).
+* digital signature, it's  widely used for data authenticity and integrity verification (usually constructed on _cryptographic hash functions_ and _public key cryptography_, only _private key_ owner is able to produce _digital signature_ which is _verifiable_ by everyone who knows _public key_).
 
-=== post quantum
-Protocol or algorithm is _post quantum_ if it can't be hacked by future _quantum computers_ (_in theory_).
+* post quantum, protocol or algorithm is _post quantum_ if it can't be hacked by future _quantum computers_ (_in theory_).
 
-=== hash links
-Data hash is a _link_ to this data or data identifier, if data is changed old link is invalid, this useful for data consistency _verification_ (or data immutability _verification_, that's constructed as chain of _hash links_ (_blockchain_)).
+* hash links, data hash is a _link_ to this data or data identifier, if data is changed old link is invalid, this useful for data consistency _verification_ (or data immutability _verification_, that's constructed as chain of _hash links_ (_blockchain_)).
 
-=== verifiable message or data
-Message or data _verifiability_ is based on _hashes_, _hash links_,_digital signatures_ and other _protocol_ specific conditions and rules.
+* verifiable message or data, message or data _verifiability_ is based on _hashes_, _hash links_,_digital signatures_ and other _protocol_ specific conditions and rules.
 
 
-=== blockchain
-It's a _state transition_ _verification_ and _traceability_ technology mainly used in _distributed ledger protocols_ (chain of transactions blocks with _hash links_ in each block to previous one, data block in chain can't be changed _untraceable_).
+* blockchain, it's a _state transition_ _verification_ and _traceability_ technology mainly used in _distributed ledger protocols_ (chain of transactions blocks with _hash links_ in each block to previous one, data block in chain can't be changed _untraceable_).
 
-=== direct acyclic graph (DAG)
-Same as _blockchain_ but instead of chain of transactions blocks _direct acyclic graph_ of blocks or single transactions is used, DAG nodes are linked by _hashes_, each node includes _hash links_ to two predecessor nodes, as main feature nodes can be automatically ordered.
+* direct acyclic graph (DAG), same as _blockchain_ but instead of chain of transactions blocks _direct acyclic graph_ of blocks or single transactions is used, DAG nodes are linked by _hashes_, each node includes _hash links_ to two predecessor nodes, as main feature nodes can be automatically ordered.
 
-=== distributed protocol
-It's a protocol for _distributed network_ of nodes with some goals and rules, all participants exchange _digitally signed_ _verifiable_ messages to achieve network goals (_state transition consensus_, _payment channel_ maintenance, _transaction_ broadcast, configuration update, etc. ).
+* distributed protocol, it's a protocol for _distributed network_ of nodes with some goals and rules, all participants exchange _digitally signed_ _verifiable_ messages to achieve network goals (_state transition consensus_, _payment channel_ maintenance, _transaction_ broadcast, configuration update, etc. ).
 
-=== distributed consensus protocol
-It's a _distributed protocol_ to reach _consensus_ of some state transition or something else in _distributed network_ of nodes without _trust_ to each other. _Consensus protocols_ must be fault tolerant and prevent _malicious_ attacks (of course if majority of nodes _malicious_ it's almost impossible to handle it (51% attack)).
+* distributed consensus protocol, it's a _distributed protocol_ to reach _consensus_ of some state transition or something else in _distributed network_ of nodes without _trust_ to each other. _Consensus protocols_ must be fault tolerant and prevent _malicious_ attacks (of course if majority of nodes _malicious_ it's almost impossible to handle it (51% attack)).
 
-=== byzantine fault tolerance (BFT)
-It's a tolerance of _distributed network_ (_protocol_) to attacks from _malicious_ participants (internal nodes), historically this problem is known as _byzantine generals problem_.
+* byzantine fault tolerance (BFT), it's a tolerance of _distributed network_ (_protocol_) to attacks from _malicious_ participants (internal nodes), historically this problem is known as _byzantine generals problem_.
 
-=== multi-party computation (MPC)
-It's two or more parties computation protocols with some security requirements (to keep computation inputs secret for example or prevent some other types of attacks).
+* multi-party computation (MPC), it's two or more parties computation protocols with some security requirements (to keep computation inputs secret for example or prevent some other types of attacks).
 
-=== permissionless protocol
-Anyone can join distributed network with _permissionless protocol_ without any explicit permission (_bitcoin_ protocol is an example).
+* permissionless protocol, anyone can join distributed network with _permissionless protocol_ without any explicit permission (_bitcoin_ protocol is an example).
 
-=== permissioned protocol
-Only _permissioned_ by some rules or 3d parties nodes are permissioned to join network and participate in protocol (network).
+* permissioned protocol, only _permissioned_ by some rules or 3d parties nodes are permissioned to join network and participate in protocol (network).
 
-=== zero knowledge proof
-One party (_prover_) proves to another party (_verifier_) a knowledge of _x_ without revealing _x_ (zero knowledge of _x_), only _proof_ of _something_ with no other information about that _something_. An example: you can prove that you older than 18 but without revealing your actual age.
+* zero knowledge proof, one party (_prover_) proves to another party (_verifier_) a knowledge of _x_ without revealing _x_ (zero knowledge of _x_), only _proof_ of _something_ with no other information about that _something_. An example: you can prove that you older than 18 but without revealing your actual age.
 
-=== smart contract
-It's a _verifiable_ and _traceable_ digital contract's execution technology of some _state transition_ or some other computation in _trustless_ environment (for example money transfer in a _ledger_).
+* smart contract, it's a _verifiable_ and _traceable_ digital contract's execution technology of some _state transition_ or some other computation in _trustless_ environment (for example money transfer in a _ledger_).
 
-=== distributed ledger technology (DLT)
-It's used to process _state transition_ _transactions_ and store _ledger_ state (data) in _distributed network_ of nodes without _trust_ to each other, each node stores _same_ copy of data as other ones for _fault and attack tolerance_.
+* distributed ledger technology (DLT), it's used to process _state transition_ _transactions_ and store _ledger_ state (data) in _distributed network_ of nodes without _trust_ to each other, each node stores _same_ copy of data as other ones for _fault and attack tolerance_.
 
-=== L1 protocols
-_L1_ is an alias for _distributed ledger_ (_on-chain_) protocols or similar.
+* L1 protocols, _L1_ is an alias for _distributed ledger_ (_on-chain_) protocols or similar.
 
-=== L2 protocols
-_L2_ is an alias for direct p2p (_off-chain_) protocols constructed on top of  direct _p2p_ _transactions_ and _L1_ protocols.
+* L2 protocols, _L2_ is an alias for direct p2p (_off-chain_) protocols constructed on top of  direct _p2p_ _transactions_ and _L1_ protocols.
 
 
-=== payment channel
-It's an direct _verifiable_ payments _p2p_ protocol (_L2_) for two parties.
+* payment channel, it's an direct _verifiable_ payments _p2p_ protocol (_L2_) for two parties.
 
-=== state channel
-Same as _payment channel_ but for any _state transition_.
+* state channel, same as _payment channel_ but for any _state transition_.
 
-=== lightning network
-It's an _L2 network_ (_protocol_) of _payment/state_ channels and _hubs_ of channels. _Payment_ or _state transition_ for two parties can be processed by _lightning network_ without direct _payment/state_ channel.
+* lightning network, it's an _L2 network_ (_protocol_) of _payment/state_ channels and _hubs_ of channels. _Payment_ or _state transition_ for two parties can be processed by _lightning network_ without direct _payment/state_ channel.
 
-=== distributed application (dapp)
-It's an _app_ runs on top of distributed protocols (_L1/L2_).
+* distributed application (dapp), it's an _app_ runs on top of distributed protocols (_L1/L2_).
 
-=== tokenomic
-It's a digital economy system with custom rules of tokens _emission_, _transfers_, _exchange_, etc., tokens can be _minted_ (_generated_) independently or linked to fiat money or other kind of assets.
+* tokenomic, it's a digital economy system with custom rules of tokens _emission_, _transfers_, _exchange_, etc., tokens can be _minted_ (_generated_) independently or linked to fiat money or other kind of assets.
 
-=== cryptocurrency
-It's a _verifiable_ and _traceable_ digital currency (with _cryptographic_ algorithms usage), usually implemented on top of _distributed ledger_ (_blockchain_) network.
+* cryptocurrency, it's a _verifiable_ and _traceable_ digital currency (with _cryptographic_ algorithms usage), usually implemented on top of _distributed ledger_ (_blockchain_) network.
 
-=== stablecoin
-Low volatility (_stable_) digital coin linked somehow to stable asset (fiat money, metal, etc. ).
+* stablecoin, low volatility (_stable_) digital coin linked somehow to stable asset (fiat money, metal, etc. ).
 
-=== defi
-Decentralized finance, decentralized financial applications. It's a _dapp_ that can provide financial services alternatively to traditional financial systems.
+* defi, decentralized finance, decentralized financial applications. It's a _dapp_ that can provide financial services alternatively to traditional financial systems.
 
-=== fintech
-Financial technologies applications and services. It's an _app_ that can be a financial frontend for endusers and replace whole bank.
+* fintech, financial technologies applications and services. It's an _app_ that can be a financial frontend for endusers and replace whole bank.
 
-=== self sovereign identity (SSI)
-It's a concept supported by _w3c_ of independent _digital identity management_ by identity owner (user).
+* self sovereign identity (SSI), it's a concept supported by _w3c_ of independent _digital identity management_ by identity owner (user).
 
-=== decentralized identifiers (DIDs)
-Self generated and managed globally unique identifiers which are used in decentralized networks (protocols).
+* decentralized identifiers (DIDs), self generated and managed globally unique identifiers which are used in decentralized networks (protocols).
 link:https://www.w3.org/TR/did-core/[W3C Working Draft]
 
-=== verifiable credentials
-Self managed digital credentials that can be issued and verified by 3d parties for digital credentials owners (users).
+* verifiable credentials, self managed digital credentials that can be issued and verified by 3d parties for digital credentials owners (users).
 link:https://www.w3.org/2017/vc/WG/[W3C Working Group]

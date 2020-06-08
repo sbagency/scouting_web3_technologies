@@ -1,13 +1,18 @@
 == distributed consensus protocols
-It's consensus on _state transition_ in distributed network without trust among participants and users (transactions senders). State transition is processed by ordered list of _transactions_, _transactions_ can be grouped by blocks (for traffic and processing optimisation).
+It's a consensus on _state storage and transition_ in distributed network without trust among consensus participants (nodes). State transition is processed by ordered list of _transactions_, _transactions_ usually are grouped by blocks (for traffic and processing optimisation).
 
-Technically to achieve consensus on _state transition_ each node should send _digitally signed_ messages with some information of _state transition_ to other nodes.
+Technically to achieve consensus on _state transition_ each node should send _digitally signed_ verifiable messages with some information of _state transition_ to other nodes. All nodes should send data to all other nodes (all-to-all), but problem is too much data to send (scalability problem). Protocol scales if to use lead node (one-to-all) who propose and coordinate _state transition_ for all network, lead election is well known technique can be implemented redundantly and fault tolerant.
+
+In distributed consensus protocols state transition is organized by transaction blocks, usually lead node (block producer) is selected by some principle to process one block, new block new block producer. Simple idea to design some kind of competition among candidates to produce blocks. Proof of work (PoW) is a permissionless (anyone can participate) mechanism when block producer candidates solve computational heavy task and offer to network state transition metadata (block) with proof (PoW). All other nodes should confirm (send digitally signed confirmation messages) state transition offered by some candidate. There are many other proof based mechanisms PoS,PoA, etc.
 
 image::images/distributed-consensus-protocols.svg[float="left",align="center"]
 
-Real world connection
+Real world connection isn't direct p2p but over internet service providers (SPs). SP is able to control traffic, disconnect any node, slow down packet delivery, etc. Moreover among nodes A,B,C,D,E there may be malicious ones B,C for instance. All this distributed consenus protocol should handle (network outage, malicious nodes).
 
 image::images/distributed-consensus-protocols-2.svg[float="left",align="center"]
+
+=== double spend problem
+Distributed consensus protocols solve _double spend problem_ when malicious node sends different but valid protocol data to other network nodes (spend same money twice or do anything else maliciously), network nodes do exchange metadata (digitally signed confirmation) to achieve distributed consensus.
 
 
 === byzantine fault tolerance (BFT)
