@@ -70,5 +70,5 @@ case N: h=hashN(h,d)
 }
 }
 ----
-16 different hash functions [X16R](https://en.bitcoinwiki.org/wiki/X16R)
+An example 16 different hash functions https://en.bitcoinwiki.org/wiki/X16R[X16R]
 
