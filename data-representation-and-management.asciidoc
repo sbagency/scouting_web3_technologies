@@ -30,9 +30,9 @@ const data = {
 console.log(JSON.stringify(data))
 // {"name":"Alice","age":18,"timestamp":1222361246237124,"comment":"Please contact by email.","nonce":12312312322}
 
-const dataArray = (new TextEncoder()).encode(JSON.stringify(data))
+const data = (new TextEncoder()).encode(JSON.stringify(data))
 
-console.log(dataArray)
+console.log(data)
 // Uint8Array(111) [
   123,  34, 110,  97, 109, 101,  34,  58,  34,  65, 108, 105,
    99, 101,  34,  44,  34,  97, 103, 101,  34,  58,  49,  56,
@@ -46,15 +46,10 @@ console.log(dataArray)
   ... 11 more items
 ]
 
-function toHexStr(d){
-  var x="";
-  for(var i=0;i<d.length;i++){
-    x=x+d[i].toString(16).padStart(2, '0');
-  }
-  return x
-}
+const dataArray = Array.from(data);
 
-const hexStr=toHexStr(dataArray)
+
+const hexStr=dataArray.map(b => b.toString(16).padStart(2, '0')).join('');
 console.log(hexStr)
 // 7b226e616d65223a22416c696365222c22616765223a31382c2274696d657374616d70223a313232323336313234363233373132342c22636f6d6d656e74223a22506c6561736520636f6e7461637420627920656d61696c2e222c226e6f6e6365223a31323331323331323332327d
 

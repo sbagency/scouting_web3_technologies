@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<meta charset="UTF-8">
+<title>hash functions</title>
+<style>
+
+
+html, body{
+  padding:0;
+  margin:0;
+  border: 0;
+  font-size:x-large;
+  
+  background: #faf8ef;
+  color: #776e65;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  /*font-size: 18px;*/
+}
+
+
+.header {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    /* opacity: 0.5; */
+    font-size: 1em;
+}
+
+#light-sw{
+  float: right;
+  padding: 1.2em;
+  text-decoration: none;
+  color: #faf8ef;//lightgray;
+}
+
+.container{
+    display: flex;
+  
+    background-color: black;
+    color:green;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    min-height:100vh;
+
+}
+
+
+
+.demoarea{
+ color:green;
+ background-color:inherit;
+ width:50vw;
+ border-color:darkgreen;
+ font-size:inherit;
+}
+
+@media (min-width : 321px) and (max-width : 480px) {
+.demoarea{
+ width:90vw;
+}
+
+html, body{
+  font-size:large;
+}
+  
+}
+
+@media (min-width : 481px) and (max-width : 640px) {
+.demoarea{
+ width:76vw;
+}
+
+html, body{
+  font-size:x-large;
+}
+
+}
+
+@media (min-width : 641px) {
+.demoarea{
+ width:50vw;
+}
+
+html, body{
+  font-size:x-large;
+}
+
+  
+}
+
+  
+
+
+
+</style>
+</head>
+  
+<body>
+<div class="header">
+<a id="light-sw" href="#">light</a>
+</div>
+
+<div class="container">
+  <h3 style="text-align:center"><i>hash functions</i></h3>
+  
+  <div style="margin:0"><i>input</i></div>
+  <div>
+    <textarea id="plaintext" class="demoarea" rows=5 spellcheck="false">Hello world!</textarea>
+  </div>
+  <div style="margin:0"><i>hash (hex)</i></div>
+  <div>
+    <textarea id="hash-hex" class="demoarea" rows=5 spellcheck="false"></textarea>
+  </div>
+
+  <div style="margin:0"><i>hash (base64)</i></div>
+  <div>
+    <textarea id="hash-b64" class="demoarea" rows=5 spellcheck="false"></textarea>
+  </div>
+
+</div>
+
+<script>
+
+var bgcolors=["black","#faf8ef"];
+var bgindex=0;
+
+var el=document.querySelector("#light-sw");
+el.onclick=function(e){
+ var el=document.querySelector(".container");
+ e.target.style.color=bgcolors[bgindex];
+ bgindex=(bgindex+1)%bgcolors.length;
+ el.style.backgroundColor=bgcolors[bgindex];
+}
+
+async function digestMessage(message) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(message);
+  const hash = await crypto.subtle.digest('SHA-256', data);
+  return hash;
+}
+
+
+function bufferToBase64(buffer) {
+     const binary = String.fromCharCode.apply(null, buffer);
+     return window.btoa(binary);
+}
+
+var hashEl=document.querySelector("#hash-hex");
+var hashElb64=document.querySelector("#hash-b64");
+var plaintextEl=document.querySelector("#plaintext");
+
+plaintextEl.oninput=async function(){
+  const digestBuffer = await digestMessage(plaintextEl.value);
+  
+  const hashArray = Array.from(new Uint8Array(digestBuffer));
+  hashEl.value = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  
+  hashElb64.value=bufferToBase64(hashArray);
+}
+
+plaintextEl.oninput();
+
+/*
+const welcomeString="Welcome to the wonderland!";
+var tick1=0;
+
+var timer1=setInterval(function(){
+  if(tick1==0){plaintextEl.value="";}
+  if(tick1<welcomeString.length){
+    plaintextEl.value+=welcomeString[tick1];
+    plaintextEl.oninput();
+    tick1++;
+  } else{
+    console.log("booome!!!");
+    clearInterval(timer1);
+  }
+  
+},300)
+
+*/
+
+</script>
+
+</body>
+  
+</html>

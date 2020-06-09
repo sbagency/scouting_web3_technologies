@@ -1,5 +1,5 @@
 == distributed consensus protocols
-It's a consensus on _state storage and transition_ in distributed network without trust among consensus participants (nodes). State transition is processed by ordered list of _transactions_, _transactions_ usually are grouped by blocks (for traffic and processing optimisation).
+It's a consensus on _state transition_ in distributed network without trust among consensus participants (nodes). State transition is processed by ordered list of _transactions_, _transactions_ usually are grouped by blocks (for traffic and processing optimisation).
 
 Technically to achieve consensus on _state transition_ each node should send _digitally signed_ verifiable messages with some information of _state transition_ to other nodes. All nodes should send data to all other nodes (all-to-all), but problem is too much data to send (scalability problem). Protocol scales if to use lead node (one-to-all) who propose and coordinate _state transition_ for all network, lead election is well known technique can be implemented redundantly and fault tolerant.
 
@@ -15,8 +15,11 @@ image::images/distributed-consensus-protocols-2.svg[float="left",align="center"]
 Distributed consensus protocols solve _double spend problem_ when malicious node sends different but valid protocol data to other network nodes (spend same money twice or do anything else maliciously), network nodes do exchange metadata (digitally signed confirmation) to achieve distributed consensus.
 
 
+image::images/double-spend.svg[float="left",align="center"]
+
+
 === byzantine fault tolerance (BFT)
-Tolerance to malicious minority of participants, formalized as byzantine generals problem.
+Tolerance to malicious minority of participants, formalized as byzantine generals problem (2/3 correctly operated nodes can provide fault tolerance and 1/2 if digital signatures are used plus messages are delivered).
 
 === proof of work (POW)
 It's a _block producer_ selection mechanism. Proof of that computationally hard problem is solved (_POW_) is used to select a _block producer_ node who provides state transition for one block, for another block - another block producer is selected.

@@ -1,0 +1,23 @@
+digraph g {
+
+//graph [layout = circo]
+
+graph [ rankdir = LR ]
+
+info [label="balances A:1.0, B:0.5, C:0",shape=none]
+
+
+node [shape=circle,color=red,style=dashed]
+
+n0 [label="A"]
+n1 [label="B"]
+n2 [label="C"]
+
+
+n0 -> n1 [label="A:0, B:1.5"]
+n0 -> n2 [label="A:0, C:1"]
+
+info->n0 [style=invis]
+
+
+}

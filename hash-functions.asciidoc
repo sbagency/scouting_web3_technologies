@@ -53,8 +53,8 @@ image::images/hash-collision-attack.svg[float="right",align="center"]
 
 
 
-=== asic resistance hashing
-Data dependency hashing (random dependency) is being built on switch-case construction. Hash is computed as a sequence of random (data dependency) hashes.
+=== brute force resistance hashing
+Brute force or asic resistance hashing. Data dependency hashing (random dependency) is being built on switch-case construction. Hash is computed as a sequence of selected by data hashes.
 [source,c++]
 ----
 // pseudo code
