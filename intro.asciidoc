@@ -6,7 +6,7 @@ _New/old_ *technologies* for the _new/old_ web:
 
 * web3 == verifiable web, *_web3_* is a long time disputed term (as happened, not a _semantic web_ as started), for today it's the web that's based on cryptographical *_verifiability_* and *_traceability_*. One of the first _verifiable web3_ projects is *_bitcoin_*, all transaction history is _traceable_ and _verifiable_ by everyone. Web3 isn't only _cryptocurrency or blockchain_ it's about _verifiability_ and _traceability_ (thanks to _cryptography_ and _digital signatures_) and long term research, last trends are _self sovereign identity_ (SSI) management (based on _decentralized identifiers_,_verifiable credentials_), blockchain adoption by government central banks, etc.
 
-* cryptography, science of data and computation protection that are mostly based on _computation complexity_ (that's bad 'cause of computing progress and especially quantum tech).
+* cryptography, science of data and computation protection that are mostly based on _computation complexity_ (that's bad 'cause of computing progress and especially quantum tech, post quantum cryptography (unbreakable by quantum computers) is under r&d and some solutions have already developed).
 
 * data representation, so many forms of data representation exist, but any data can be serialized as byte array suitable for cryptographic protocols, it's necessary to compute data hash, digitally sign data, send data over network, represent data as big number, etc.
 

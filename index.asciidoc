@@ -16,8 +16,6 @@ This copy is for PERSONAL USE ONLY. You may read it for free. You may NOT distri
 
 include::intro.asciidoc[]
 
-include::data-representation-and-management.asciidoc[]
-
 include::hash-functions.asciidoc[]
 include::symmetric-encryption.asciidoc[]
 include::asymmetric-encryption.asciidoc[]
@@ -41,4 +39,6 @@ include::decentralized-identifiers.asciidoc[]
 include::cyber-physically-protected-systems.asciidoc[]
 
 include::secure-by-design.asciidoc[]
+
+//include::data-representation-and-management.asciidoc[]
 

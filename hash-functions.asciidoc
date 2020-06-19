@@ -11,7 +11,7 @@ It's a *_hash function_* for which extremely hard (practically impossible) to fi
 
 
 === collision
-It's a situation when *_hash function_* produces same output for two different inputs.
+It's a situation when *_hash function_* produces same output for two or more different inputs.
 
 image::images/collision.svg[float="right",align="center"]
 
@@ -28,11 +28,11 @@ It's an alias to input of a *_hash function_*.
 It's used to verify message data integrity and authenticity by _secret key_ usage, _mac = hash(data + secret key)_.
 
 === hash function design
-Simple *_hash function_* can be constructed as a logical or arithmetical sum of input data blocks (input can be represented as an array of data blocks), result sum size can be reduced by _mod_ operation.
+Simple *_hash function_* (non cryptographic) can be constructed as a logical or arithmetical sum of input data blocks (input can be represented as an array of data blocks, bytes or bits), if necessary result sum size can be reduced by _mod_ operation.
 
 image::images/simple-hash-func.svg[float="right",align="center"]
 
-More practical *_cryptographic hash functions_* are _bit mixers_, with property that one bit change in input produces about half bits change in output (good example _sha256_ which is used in _bitcoin_ and many other protocols).
+*_Cryptographic hash functions_* are _bit mixers_, with property that one bit change in input produces about half bits change in output (good example _sha256_ which is used in _bitcoin_ and many other protocols).
 
 === merkle tree
 It's a binary tree of concatenated (paired) hashes of neighbour data blocks. Whole data can be splitted into data blocks. Pair of neighbor blocks hashes is concatenated to produce next level hash, this applies to array of produced hashes until one hash is left (merkle root). The path from the bottom data block hash to root hash is named as _merle path_.
@@ -51,14 +51,15 @@ Exploitation of _hash_ collisions to substitute different data for same hash by 
 
 image::images/hash-collision-attack.svg[float="right",align="center"]
 
-
+=== hash collision attack prevention
+Bigger hash size, multi-hashing. Data fields validation.
 
 === brute force resistance hashing
-Brute force or asic resistance hashing. Data dependency hashing (random dependency) is being built on switch-case construction. Hash is computed as a sequence of selected by data hashes.
+Brute force or ASIC resistance hashing. Data dependency hashing (random dependency to prevent static IC design) is being built on switch-case construction. Hash is computed as a sequence of selected by data hashes.
 [source,c++]
 ----
 // pseudo code
-h=0;
+...
 for(int i=0;i<l;i++){
 d=data[i];
 switch(d){
@@ -68,7 +69,12 @@ case 2: h=hash2(h,d)
 ...
 case N: h=hashN(h,d)
 }
+...
 }
 ----
-An example 16 different hash functions https://en.bitcoinwiki.org/wiki/X16R[X16R]
+An example 16 or 17 different hash functions https://en.bitcoinwiki.org/wiki/X16R[X16R] https://en.bitcoinwiki.org/wiki/X17[X17]
+
+
+=== use cases
+Data integrity verification, digital signatures, hash links, hash trees, blockchains, etc.
 
