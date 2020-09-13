@@ -1,0 +1,37 @@
+== random numbers
+[%hardbreaks]
+
+=== random bytes for private keys
+Get entropy from user (keyboard,touchpad,mouse) and system (last bytes of high precision timer/high frequency counter). Do some bit mixing (hashing) random_number=hash(user_entropy^system_entropy).
+
+=== PRNG
+Pseudo random number generator:
+
+prev_random_bytes=hash(user_entropy()^system_entropy())
+random_bytes=hash(prev_random_bytes^system_entropy())
+prev_random_bytes=high(random_bytes)
+random_number=low(random_bytes)
+
+=== commit-reveal multi-party
+Trustless multi-party random number generation (commit-reveal scheme):
+
+1. commit:
+generate random_number
+send hash(random_number) to other parties
+recieve hashes from other parties
+
+2. reveal:
+send random_number to other parties
+recieve random_numbers from other parties, verify hashes
+
+result_random_numer=sum(random_numbers)
+
+Possible attacks: hash collisions exploitation, protocol sabotage
+
+=== verifiable delay functions
+Sequence of no shortcuts (no parallelism) computing (example: repeated squaring in a group of unknown order f(x,t)=pow(x,pow,(2,t)) mod N).
+Future results are unpredictable (random), since iterations can't be speed up, no one is able to compute result faster.
+Needs initial random seed.
+
+r0->r1->..->ri->..
+

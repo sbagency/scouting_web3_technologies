@@ -16,6 +16,8 @@ This copy is for PERSONAL USE ONLY. You may read it for free. You may NOT distri
 
 include::intro.asciidoc[]
 
+include::random-numbers.asciidoc[]
+
 include::hash-functions.asciidoc[]
 include::symmetric-encryption.asciidoc[]
 include::asymmetric-encryption.asciidoc[]
